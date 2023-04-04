@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -48,7 +48,7 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -83,6 +83,23 @@ module.exports = {
               target: '_blank',
               rel: 'nofollow',
             },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://spoqa.github.io`, `https://webfontworld.github.io`],
+        web: [
+          {
+            name: `Spoqa Han Sans Neo`,
+            file: `https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css`,
+          },
+          {
+            name: `Jalnan`,
+            file: `https://webfontworld.github.io/goodchoice/Jalnan.css`,
           },
         ],
       },
