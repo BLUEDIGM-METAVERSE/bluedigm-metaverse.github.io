@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Metaverse Team`,
+    description: `(주)비디 • 블루다임 • 디지털플랫폼본부 • 메타버스팀`,
+    author: `메타버스팀`,
+    siteUrl: `https://bluedigm-metaverse.github.io/`,
   },
   plugins: [
     {
@@ -102,6 +102,13 @@ module.exports = {
             file: `https://webfontworld.github.io/goodchoice/Jalnan.css`,
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://bluedigm-metaverse.github.io/',
+        stripQueryString: true,
       },
     },
   ],
