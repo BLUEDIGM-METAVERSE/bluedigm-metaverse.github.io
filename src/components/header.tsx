@@ -1,60 +1,67 @@
 import React, { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-type HeaderProps = {
-  headerData: {
-    logoImage: IGatsbyImageData
-    iconSearch: IGatsbyImageData
-  }
-}
+import Logo from '../assets/logo.svg'
+import IconSearch from '../assets/icons/search.svg'
 
 const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 40px 24px;
-  background-color: #ead8ff;
+  height: 100px;
+  padding: 0 24px;
 `
 
-const NavLinks = styled.div`
-  display: flex;
-  align-items: center;
-
+const LogoWrapper = styled.h1`
   a {
-    margin-right: 32px;
-    font-weight: 700;
-    color: #4d4d4d;
-    text-decoration: none;
+    display: block;
+    width: 194px;
+    height: 28px;
   }
 `
 
-const SearchButton = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+const GlobalNavWrapper = styled.div`
   display: flex;
   align-items: center;
 `
 
-const Header: FunctionComponent<HeaderProps> = function ({ headerData }) {
+const NavLinks = styled.nav`
+  a {
+    margin-right: 32px;
+    font-color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 700;
+  }
+`
+
+const NavButtonWrapper = styled.div`
+  width: 24px;
+  height: 24px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+`
+
+const Header: FunctionComponent = function () {
   return (
     <HeaderWrapper>
-      <h1>
+      <LogoWrapper>
         <Link to="/">
-          <GatsbyImage image={headerData.logoImage} alt="Logo" />
+          <Logo />
         </Link>
-      </h1>
-      <NavLinks>
-        <Link to="/">끝 없는 기술 이야기</Link>
-        <Link to="/">업무의 연속</Link>
-        <SearchButton>
-          <GatsbyImage image={headerData.iconSearch} alt="Search icon" />
-        </SearchButton>
-      </NavLinks>
+      </LogoWrapper>
+      <GlobalNavWrapper>
+        <NavLinks>
+          <Link to="/posts">끝 없는 기술 이야기</Link>
+          <Link to="/projects">업무의 연속</Link>
+        </NavLinks>
+        <NavButtonWrapper>
+          <IconSearch />
+        </NavButtonWrapper>
+      </GlobalNavWrapper>
     </HeaderWrapper>
   )
 }

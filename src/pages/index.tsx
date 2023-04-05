@@ -1,36 +1,55 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
+import styled from '@emotion/styled'
 
-type IndexPageProps = {
-  data: {
-    logoImage: {
-      childImageSharp: {
-        gatsbyImageData: IGatsbyImageData
-      }
-    }
-    iconSearch: {
-      childImageSharp: {
-        gatsbyImageData: IGatsbyImageData
-      }
-    }
-  }
-}
+type IndexPageProps = {}
 
-const IndexPage: FunctionComponent<IndexPageProps> = function ({ data }) {
-  const layoutData = {
-    headerData: {
-      logoImage: data.logoImage.childImageSharp.gatsbyImageData,
-      iconSearch: data.iconSearch.childImageSharp.gatsbyImageData,
-    },
-  }
+const KeyVisual = styled.section`
+  background-color: #333333;
+  color: white;
+`
+const Story = styled.section`
+  background-color: #4d4d4d;
+  color: white;
+`
+const Posts = styled.section`
+  background-color: #737373;
+  color: white;
+`
+const Team = styled.section`
+  background-color: #999999;
+  color: white;
+`
+const Culture = styled.section`
+  background-color: #bfbfbf;
+  color: white;
+`
+const Container = styled.div`
+  height: 100px;
+  text-align: center;
+  font-size: 24px;
+`
 
+const IndexPage: FunctionComponent<IndexPageProps> = function () {
   return (
-    <Layout layoutData={layoutData}>
-      <section>Hello, Metaverse Team!</section>
-      <section>Comming soon..!</section>
+    <Layout>
+      <KeyVisual>
+        <Container>Key Visual Section</Container>
+      </KeyVisual>
+      <Story>
+        <Container>Story Section</Container>
+      </Story>
+      <Posts>
+        <Container>Posts Section</Container>
+      </Posts>
+      <Team>
+        <Container>Team Section</Container>
+      </Team>
+      <Culture>
+        <Container>Culture Section</Container>
+      </Culture>
     </Layout>
   )
 }
@@ -38,18 +57,3 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({ data }) {
 export const Head = () => {}
 
 export default IndexPage
-
-export const query = graphql`
-  {
-    logoImage: file(name: { eq: "logo" }) {
-      childImageSharp {
-        gatsbyImageData(width: 194, height: 28)
-      }
-    }
-    iconSearch: file(name: { eq: "icon-search" }) {
-      childImageSharp {
-        gatsbyImageData(width: 20, height: 20)
-      }
-    }
-  }
-`
