@@ -31,18 +31,21 @@ const useInfiniteScroll = function (
     [selectedCategory],
   )
 
-  const observer: IntersectionObserver = new IntersectionObserver(
-    (entries, observer) => {
-      if (!entries[0].isIntersecting) return
+  const observer =
+    typeof window !== 'undefined' && window.IntersectionObserver
+      ? new IntersectionObserver((entries, observer) => {
+          if (!entries[0].isIntersecting) return
 
-      setCount(value => value + 1)
-      observer.disconnect()
-    },
-  )
+          setCount(value => value + 1)
+          observer.disconnect()
+        })
+      : null
 
   useEffect(() => setCount(1), [selectedCategory])
 
   useEffect(() => {
+    if (!observer) return
+
     if (
       NUMBER_OF_ITEMS_PER_PAGE * count >= postListByCategory.length ||
       containerRef.current === null ||
