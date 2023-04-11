@@ -31,3 +31,51 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({ node, name: 'slug', value: slug });
   }
 };
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
+
+  const queryAllMarkdownData = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: [{ frontmatter: { date: DESC } }, { frontmatter: { title: ASC } }]
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `,
+  );
+
+  if (queryAllMarkdownData.errors) {
+    reporter.panicOnBuild(`Error while running query`);
+    return;
+  }
+
+  const PostTemplateComponent = path.resolve(
+    __dirname,
+    'src/components/post/post-detail.tsx',
+  );
+
+  const generatePostPage = ({
+    node: {
+      fields: { slug },
+    },
+  }) => {
+    const pageOptions = {
+      path: slug,
+      component: PostTemplateComponent,
+      context: { slug },
+    };
+
+    createPage(pageOptions);
+  };
+
+  queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(generatePostPage);
+};

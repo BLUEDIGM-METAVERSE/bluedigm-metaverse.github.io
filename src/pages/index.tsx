@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from 'react'
-import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from 'components/common/layout'
 import styled from '@emotion/styled'
 
 type IndexPageProps = {}
@@ -27,7 +26,6 @@ const Culture = styled.section`
   color: white;
 `
 const Container = styled.div`
-  height: 100px;
   text-align: center;
   font-size: 24px;
 `

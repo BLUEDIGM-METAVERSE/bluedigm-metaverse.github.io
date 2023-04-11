@@ -9,7 +9,7 @@ const FooterWrapper = styled.footer`
 `
 
 const Footer: FunctionComponent = function () {
-  return <FooterWrapper>© 2023 Metaver Team</FooterWrapper>
+  return <FooterWrapper>© 2023 Metaverse Team</FooterWrapper>
 }
 
 export default Footer

@@ -2,8 +2,8 @@ import React, { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
-import Logo from '../assets/logo.svg'
-import IconSearch from '../assets/icons/search.svg'
+import Logo from '../../assets/logo.svg'
+import IconSearch from '../../assets/icons/search.svg'
 
 const HeaderWrapper = styled.header`
   display: flex;
