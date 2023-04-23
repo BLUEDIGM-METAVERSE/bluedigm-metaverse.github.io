@@ -58,7 +58,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  const PostTemplateComponent = path.resolve(
+  const PostDetailComponent = path.resolve(
     __dirname,
     'src/components/post/post-detail.tsx',
   );
@@ -70,7 +70,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }) => {
     const pageOptions = {
       path: slug,
-      component: PostTemplateComponent,
+      component: PostDetailComponent,
       context: { slug },
     };
 

@@ -8,7 +8,7 @@ import useInfiniteScroll, {
 } from 'hooks/use-infinite-scroll'
 
 type PostListProps = {
-  selectedCategory: string
+  selectedTag: string
   posts: PostListItemType[]
 }
 
@@ -21,11 +21,11 @@ const PostListWrapper = styled.div`
 `
 
 const PostList: FunctionComponent<PostListProps> = function ({
-  selectedCategory,
+  selectedTag,
   posts,
 }) {
   const { containerRef, postList }: useInfiniteScrollType = useInfiniteScroll(
-    selectedCategory,
+    selectedTag,
     posts,
   )
 

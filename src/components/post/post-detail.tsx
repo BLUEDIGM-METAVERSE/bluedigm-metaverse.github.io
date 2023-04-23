@@ -10,11 +10,11 @@ interface PostDetailProps {
         node: {
           html: string
           frontmatter: {
-            categories: string[]
+            category: string
             title: string
-            summary: string
             date: string
             writer: string
+            tags: string[]
           }
         }
       }[]
@@ -27,7 +27,7 @@ const PostHead = styled.div`
   flex-direction: column;
   width: 768px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 0 0 0;
 `
 
 const PostContent = styled.div`
@@ -134,7 +134,7 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
   const {
     node: {
       html,
-      frontmatter: { categories, title, summary, date, writer },
+      frontmatter: { category, title, date, writer, tags },
     },
   } = edges[0]
 
@@ -142,10 +142,11 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
     <Layout>
       <PostHead>
         <h1>{title}</h1>
-        <div>Categories: {categories.join(', ')}</div>
-        <div>Summary: {summary}</div>
+        <br />
         <div>Date: {date}</div>
         <div>Writer: {writer}</div>
+        <div>Category: {category}</div>
+        <div>Tags: {tags.join(', ')}</div>
       </PostHead>
       <PostContent dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
@@ -161,11 +162,11 @@ export const queryMarkdownDataBySlug = graphql`
         node {
           html
           frontmatter {
-            categories
+            category
             title
-            summary
             date(formatString: "YYYY.MM.DD.")
             writer
+            tags
           }
         }
       }

@@ -6,9 +6,7 @@ import styled from '@emotion/styled'
 import queryString, { ParsedQuery } from 'query-string'
 
 import PostList from 'components/post/post-list'
-import CategoryList, {
-  CategoryListProps,
-} from 'components/category/category-list'
+import TagList, { TagListProps } from 'components/tag/tag-list'
 import { PostListItemType, PostType } from 'types/post.types'
 
 type PostsPageProps = {
@@ -32,25 +30,23 @@ const PostsPage: FunctionComponent<PostsPageProps> = function ({
   },
 }) {
   const parsed: ParsedQuery<string> = queryString.parse(search)
-  const selectedCategory: string =
-    typeof parsed.category !== 'string' || !parsed.category
-      ? 'ALL'
-      : parsed.category
+  const selectedTag: string =
+    typeof parsed.tag !== 'string' || !parsed.tag ? 'ALL' : parsed.tag
 
-  const categoryList = useMemo(
+  const tagList = useMemo(
     () =>
       edges.reduce(
         (
-          list: CategoryListProps['categoryList'],
+          list: TagListProps['tagList'],
           {
             node: {
-              frontmatter: { categories },
+              frontmatter: { tags },
             },
           }: PostType,
         ) => {
-          categories.forEach(category => {
-            if (list[category] === undefined) list[category] = 1
-            else list[category]++
+          tags.forEach(tag => {
+            if (list[tag] === undefined) list[tag] = 1
+            else list[tag]++
           })
 
           list['ALL']++
@@ -66,11 +62,8 @@ const PostsPage: FunctionComponent<PostsPageProps> = function ({
     <Layout>
       <Posts>
         <Container>
-          <CategoryList
-            selectedCategory={selectedCategory}
-            categoryList={categoryList}
-          />
-          <PostList selectedCategory={selectedCategory} posts={edges} />
+          <TagList selectedTag={selectedTag} tagList={tagList} />
+          <PostList selectedTag={selectedTag} posts={edges} />
         </Container>
       </Posts>
     </Layout>
@@ -93,11 +86,11 @@ export const selectPostList = graphql`
             slug
           }
           frontmatter {
-            categories
+            category
             title
-            summary
             date(formatString: "YYYY.MM.DD.")
             writer
+            tags
           }
         }
       }

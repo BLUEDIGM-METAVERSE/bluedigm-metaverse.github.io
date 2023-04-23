@@ -44,19 +44,21 @@ const PostSummary = styled.div`
 const PostBottom = styled.div``
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
-  categories,
+  category,
   title,
-  summary,
   date,
   writer,
+  tags,
   link,
 }) {
   return (
     <PostItemWrapper to={link}>
       <PostItemContent>
-        <PostTop>{categories}</PostTop>
+        <PostTop>
+          {tags} / {category}
+        </PostTop>
         <PostTitle>{title}</PostTitle>
-        <PostSummary>{summary}</PostSummary>
+        <PostSummary>Contents를 Summary 변경</PostSummary>
         <PostBottom>
           {writer} ... {date}
         </PostBottom>

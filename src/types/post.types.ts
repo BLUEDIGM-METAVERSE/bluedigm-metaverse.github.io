@@ -2,21 +2,21 @@ export type PostType = {
   node: {
     id: string
     frontmatter: {
-      categories: string[]
+      category: string
       title: string
-      summary: string
       date: string
       writer: string
+      tags: string[]
     }
   }
 }
 
 export type PostFrontmatterType = {
-  categories: string[]
+  ategory: string
   title: string
-  summary: string
   date: string
   writer: string
+  tags: string[]
   link: string
 }
 
