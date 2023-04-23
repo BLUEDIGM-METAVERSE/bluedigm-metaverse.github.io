@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[754],{234:function(t,e,n){n.r(e),n.d(e,{Head:function(){return c}});var s=n(4316),l=n(8378),a=n(917);const r=(0,s.Z)("section",{target:"es6lkge1"})(""),u=(0,s.Z)("div",{target:"es6lkge0"})({name:"segps3",styles:"height:100px;text-align:center;font-size:24px;color:#fc875e"}),c=()=>{};e.default=function(){return(0,a.tZ)(l.Z,null,(0,a.tZ)(r,null,(0,a.tZ)(u,null,"Tech Posts Section")))}}}]);
-//# sourceMappingURL=component---src-pages-posts-tsx-8c9d6dfab6969992c0eb.js.map
