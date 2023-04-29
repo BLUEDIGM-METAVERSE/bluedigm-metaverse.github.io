@@ -146,7 +146,7 @@ const TechDetail: FunctionComponent<TechDetailProps> = function ({
         <div>Date: {date}</div>
         <div>Writer: {writer}</div>
         <div>Category: {category}</div>
-        <div>Tags: {tags.join(', ')}</div>
+        <div>Tags: {tags ? tags.join(', ') : ''}</div>
       </TechHead>
       <TechContent dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
