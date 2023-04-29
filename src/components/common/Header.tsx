@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
 import Logo from '../../assets/logo.svg'
-import IconSearch from '../../assets/icons/search.svg'
+import SearchIcon from '../../assets/icons/search.svg'
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -55,11 +55,12 @@ const Header: FunctionComponent = function () {
       </LogoWrapper>
       <GlobalNavWrapper>
         <NavLinks>
-          <Link to="/posts">끝 없는 기술 이야기</Link>
-          <Link to="/projects">업무의 연속</Link>
+          <Link to="/projects">프로젝트</Link>
+          <Link to="/culture">문화</Link>
+          <Link to="/tech">기술</Link>
         </NavLinks>
         <NavButtonWrapper>
-          <IconSearch />
+          <SearchIcon />
         </NavButtonWrapper>
       </GlobalNavWrapper>
     </HeaderWrapper>

@@ -1,29 +1,29 @@
 import { MutableRefObject, useEffect, useMemo, useRef, useState } from 'react'
-import { PostListItemType } from 'types/post.types'
+import { TechListItemType } from '../types/tech.types'
 
 export type useInfiniteScrollType = {
   containerRef: MutableRefObject<HTMLDivElement | null>
-  postList: PostListItemType[]
+  techList: TechListItemType[]
 }
 
 const NUMBER_OF_ITEMS_PER_PAGE = 6
 
 const useInfiniteScroll = function (
   selectedCategory: string,
-  posts: PostListItemType[],
+  posts: TechListItemType[],
 ): useInfiniteScrollType {
   const containerRef: MutableRefObject<HTMLDivElement | null> =
     useRef<HTMLDivElement>(null)
   const [count, setCount] = useState<number>(1)
 
-  const postListByCategory = useMemo<PostListItemType[]>(
+  const postListByCategory = useMemo<TechListItemType[]>(
     () =>
       posts.filter(
         ({
           node: {
             frontmatter: { tags },
           },
-        }: PostListItemType) =>
+        }: TechListItemType) =>
           selectedCategory !== 'ALL' ? tags.includes(selectedCategory) : true,
       ),
     [selectedCategory],
@@ -58,7 +58,7 @@ const useInfiniteScroll = function (
 
   return {
     containerRef,
-    postList: postListByCategory.slice(0, count * NUMBER_OF_ITEMS_PER_PAGE),
+    techList: postListByCategory.slice(0, count * NUMBER_OF_ITEMS_PER_PAGE),
   }
 }
 

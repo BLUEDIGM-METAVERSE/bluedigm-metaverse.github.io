@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 
-import Layout from 'components/common/layout'
+import Layout from 'components/common/Layout'
 
 const NotFoundPage: FunctionComponent = function () {
   return (

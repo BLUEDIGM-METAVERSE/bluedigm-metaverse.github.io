@@ -1,9 +1,9 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import styled from '@emotion/styled'
 
-import GlobalStyle from './global-style'
-import Header from './header'
-import Footer from './footer'
+import GlobalStyle from './GlobalStyle'
+import Header from './Header'
+import Footer from './Footer'
 
 type LayoutProps = {
   children: ReactNode

@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 
-import Layout from 'components/common/layout'
+import Layout from 'components/common/Layout'
 import styled from '@emotion/styled'
 
 type IndexPageProps = {}

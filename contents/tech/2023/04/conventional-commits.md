@@ -65,4 +65,4 @@ Refs: #AOP-100
 
 #### Git Commit Message Image Example...
 
-![Git Commit Message Example](./images/git-commit-message.png)
+![Git Commit Message Example](images/git-commit-message.png)

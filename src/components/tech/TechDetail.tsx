@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import Layout from 'components/common/layout'
+import Layout from 'components/common/Layout'
 
-interface PostDetailProps {
+interface TechDetailProps {
   data: {
     allMarkdownRemark: {
       edges: {
@@ -22,7 +22,7 @@ interface PostDetailProps {
   }
 }
 
-const PostHead = styled.div`
+const TechHead = styled.div`
   display: flex;
   flex-direction: column;
   width: 768px;
@@ -30,7 +30,7 @@ const PostHead = styled.div`
   padding: 100px 0 0 0;
 `
 
-const PostContent = styled.div`
+const TechContent = styled.div`
   // Renderer Style
   display: flex;
   flex-direction: column;
@@ -126,7 +126,7 @@ const PostContent = styled.div`
   }
 `
 
-const PostDetail: FunctionComponent<PostDetailProps> = function ({
+const TechDetail: FunctionComponent<TechDetailProps> = function ({
   data: {
     allMarkdownRemark: { edges },
   },
@@ -140,20 +140,20 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
 
   return (
     <Layout>
-      <PostHead>
+      <TechHead>
         <h1>{title}</h1>
         <br />
         <div>Date: {date}</div>
         <div>Writer: {writer}</div>
         <div>Category: {category}</div>
         <div>Tags: {tags.join(', ')}</div>
-      </PostHead>
-      <PostContent dangerouslySetInnerHTML={{ __html: html }} />
+      </TechHead>
+      <TechContent dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
 
-export default PostDetail
+export default TechDetail
 
 export const queryMarkdownDataBySlug = graphql`
   query queryMarkdownDataBySlug($slug: String) {

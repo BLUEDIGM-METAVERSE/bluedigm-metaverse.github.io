@@ -20,8 +20,8 @@ type GatsbyLinkProps = {
 } & TagItemProps
 
 const TagListWrapper = styled.div`
-  margin: 0 auto;
-  padding: 80px 181px 120px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 0 50px 0;
 `
 
 const TagItem = styled(({ active, ...props }: GatsbyLinkProps) => (

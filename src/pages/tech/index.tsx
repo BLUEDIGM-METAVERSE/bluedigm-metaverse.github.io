@@ -1,29 +1,24 @@
 import React, { FunctionComponent, useMemo } from 'react'
 import { graphql } from 'gatsby'
-
-import Layout from 'components/common/layout'
+import Layout from 'components/common/Layout'
 import styled from '@emotion/styled'
 import queryString, { ParsedQuery } from 'query-string'
+import TechList from 'components/tech/TechList'
+import { TechListItemType, TechType } from '../../types/tech.types'
+import TagList, { TagListProps } from 'components/tag/TagList'
 
-import PostList from 'components/post/post-list'
-import TagList, { TagListProps } from 'components/tag/tag-list'
-import { PostListItemType, PostType } from 'types/post.types'
-
-type PostsPageProps = {
+type TechPageProps = {
   location: {
     search: string
   }
   data: {
     allMarkdownRemark: {
-      edges: PostListItemType[]
+      edges: TechListItemType[]
     }
   }
 }
 
-const Posts = styled.section``
-const Container = styled.div``
-
-const PostsPage: FunctionComponent<PostsPageProps> = function ({
+const TechPage: FunctionComponent<TechPageProps> = function ({
   location: { search },
   data: {
     allMarkdownRemark: { edges },
@@ -42,7 +37,7 @@ const PostsPage: FunctionComponent<PostsPageProps> = function ({
             node: {
               frontmatter: { tags },
             },
-          }: PostType,
+          }: TechType,
         ) => {
           tags.forEach(tag => {
             if (list[tag] === undefined) list[tag] = 1
@@ -60,23 +55,27 @@ const PostsPage: FunctionComponent<PostsPageProps> = function ({
 
   return (
     <Layout>
-      <Posts>
-        <Container>
+      <Container>
+        <TechSection>
+          <SectionHeader>
+            <Heading>우리의 기술 경험을 공유해요</Heading>
+          </SectionHeader>
           <TagList selectedTag={selectedTag} tagList={tagList} />
-          <PostList selectedTag={selectedTag} posts={edges} />
-        </Container>
-      </Posts>
+          <TechList selectedTag={selectedTag} tech={edges} />
+        </TechSection>
+      </Container>
     </Layout>
   )
 }
 
 export const Head = () => {}
 
-export default PostsPage
+export default TechPage
 
-export const selectPostList = graphql`
-  query selectPostList {
+export const selectTechList = graphql`
+  query selectTechList {
     allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(tech)/" } }
       sort: [{ frontmatter: { date: DESC } }, { frontmatter: { title: ASC } }]
     ) {
       edges {
@@ -96,4 +95,30 @@ export const selectPostList = graphql`
       }
     }
   }
+`
+
+/**
+ * Styled
+ */
+const Container = styled.div`
+  max-width: 1558px;
+  margin: 0 auto;
+  padding-bottom: 127px;
+`
+
+const TechSection = styled.section``
+
+const SectionHeader = styled.header`
+  max-width: 941px;
+  padding: 76px 0;
+  margin-bottom: 120px;
+`
+
+const Heading = styled.h1`
+  font-family: 'Jalnan';
+  font-weight: 700;
+  font-size: 130px;
+  line-height: 140px;
+  letter-spacing: -0.006em;
+  color: #000000;
 `
