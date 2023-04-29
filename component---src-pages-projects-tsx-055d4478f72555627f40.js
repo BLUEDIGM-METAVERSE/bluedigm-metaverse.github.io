@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[317],{7166:function(t,e,n){n.r(e),n.d(e,{Head:function(){return c}});var u=n(4316),r=n(5170),a=n(917);const s=(0,u.Z)("section",{target:"eex11nu1"})(""),l=(0,u.Z)("div",{target:"eex11nu0"})({name:"18wvupe",styles:"text-align:center;font-size:24px;color:#4006e5"}),c=()=>{};e.default=function(){return(0,a.tZ)(r.Z,null,(0,a.tZ)(s,null,(0,a.tZ)(l,null,"Projects Section")))}}}]);
-//# sourceMappingURL=component---src-pages-projects-tsx-055d4478f72555627f40.js.map
