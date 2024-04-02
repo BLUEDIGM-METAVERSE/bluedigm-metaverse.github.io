@@ -5,6 +5,7 @@ export type CultureType = {
     id: string
     frontmatter: {
       title: string
+      summary: string
       thumbnail: {
         publicURL: string
       }
@@ -16,6 +17,7 @@ export type CultureType = {
 
 export type CultureFrontmatterType = {
   title: string
+  summary: string
   thumbnail: {
     childImageSharp: {
       gatsbyImageData: IGatsbyImageData

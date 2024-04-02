@@ -1,8 +1,7 @@
 import { CultureListItemType } from '../../types/culture.type'
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
+import Layout from 'components/common/SubLayout'
 import { graphql } from 'gatsby'
-import styled from '@emotion/styled'
-import Layout from 'components/common/Layout'
 import CultureList from 'components/culture/CultureList'
 
 type CulturePageProps = {
@@ -22,15 +21,14 @@ const CulturePage: FunctionComponent<CulturePageProps> = function ({
   },
 }) {
   return (
-    <Layout>
-      <Container>
-        <CultureSection>
-          <SectionHeader>
-            <Heading>메타버스팀 문화를 소개합니다</Heading>
-          </SectionHeader>
-          <CultureList cultures={edges} />
-        </CultureSection>
-      </Container>
+    <Layout> {/* main */}
+      <div className="sub-keyvisual"></div>
+      <div className="container">
+          <div className="row">
+              <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">우리의 이야기를<br />문화로 만들어요</div>
+              <CultureList cultures={edges} />
+          </div>
+      </div>
     </Layout>
   )
 }
@@ -39,8 +37,8 @@ export const Head = () => {}
 
 export default CulturePage
 
-export const selectProjectList = graphql`
-  query selectTechList {
+export const selectCultureList = graphql`
+  query selectCultureList {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(culture)/" } }
       sort: [
@@ -56,6 +54,7 @@ export const selectProjectList = graphql`
           }
           frontmatter {
             title
+            summary
             thumbnail {
               childImageSharp {
                 gatsbyImageData(width: 1560, height: 700)
@@ -68,31 +67,4 @@ export const selectProjectList = graphql`
       }
     }
   }
-`
-
-/**
- * Styled
- */
-const Container = styled.div`
-  max-width: 1558px;
-  margin: 0 auto;
-  padding-bottom: 127px;
-`
-
-const CultureSection = styled.section``
-
-const SectionHeader = styled.header`
-  max-width: 941px;
-  padding: 76px 0;
-  margin-bottom: 120px;
-`
-
-const Heading = styled.h1`
-  font-family: 'Jalnan';
-  font-weight: 700;
-  font-size: 130px;
-  line-height: 140px;
-  letter-spacing: -0.006em;
-  color: #000000;
-  white-space: pre-line;
 `

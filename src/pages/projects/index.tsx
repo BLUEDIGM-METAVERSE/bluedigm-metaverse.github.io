@@ -23,17 +23,13 @@ const ProjectPage: FunctionComponent<ProjectPageProps> = function ({
 }) {
   return (
     <Layout>
-      <Container>
-        <ProjectSection>
-          <SectionHeader>
-            <Heading>
-              {`현재 진행중인
-                프로젝트 입니다`}
-            </Heading>
-          </SectionHeader>
-          <ProjectList projects={edges} />
-        </ProjectSection>
-      </Container>
+      <div className="sub-keyvisual"></div>
+      <div className="container">
+          <div className="row">
+              <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">현재 진행중인 프로젝트 입니다</div>
+              <ProjectList projects={edges} />
+          </div>
+      </div>
     </Layout>
   )
 }
@@ -43,7 +39,7 @@ export const Head = () => {}
 export default ProjectPage
 
 export const selectProjectList = graphql`
-  query selectTechList {
+  query selectProjectList {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(projects)/" } }
       sort: [
@@ -71,31 +67,4 @@ export const selectProjectList = graphql`
       }
     }
   }
-`
-
-/**
- * Styled
- */
-const Container = styled.div`
-  max-width: 1558px;
-  margin: 0 auto;
-  padding-bottom: 127px;
-`
-
-const ProjectSection = styled.section``
-
-const SectionHeader = styled.header`
-  max-width: 941px;
-  padding: 76px 0;
-  margin-bottom: 120px;
-`
-
-const Heading = styled.h1`
-  font-family: 'Jalnan';
-  font-weight: 700;
-  font-size: 130px;
-  line-height: 140px;
-  letter-spacing: -0.006em;
-  color: #000000;
-  white-space: pre-line;
 `

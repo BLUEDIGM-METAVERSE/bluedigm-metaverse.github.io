@@ -26,10 +26,7 @@ const TechItem: FunctionComponent<TechItemProps> = function ({
       <h2>{title}</h2>
 
       <TechSummary>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus fuga
-        fugiat, incidunt maxime minus natus necessitatibus vero voluptas!
-        Consectetur doloremque ducimus exercitationem impedit magnam, non
-        officia praesentium sapiente velit voluptas.
+        기술 요약본 가져오기
       </TechSummary>
 
       <footer>

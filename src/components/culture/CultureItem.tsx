@@ -8,17 +8,24 @@ type CultureItemProps = CultureFrontmatterType & { link: string }
 
 const CultureItem: FunctionComponent<CultureItemProps> = function ({
   title,
+  summary,
   thumbnail: {
     childImageSharp: { gatsbyImageData },
   },
   link,
 }) {
   return (
-    <PostItemWrapper to={link}>
-      <Thumbnail image={gatsbyImageData} alt="Culture Thumbnail" />
-      <h2>{title}</h2>
-      <p>우당탕탕 DigitalPlatform 본부 워크샵이야기 (Hard Coding)</p>
-    </PostItemWrapper>
+    <li className="col-sm-4 col-md-12 col-lg-12">
+        <a href="./view2.html">
+            <div className="thum">
+              <Thumbnail image={gatsbyImageData} alt="Culture Thumbnail" />
+            </div>
+            <dl>
+                <dt>{title}</dt>
+                <dd>{summary}</dd>
+            </dl>
+        </a>
+    </li>
   )
 }
 
