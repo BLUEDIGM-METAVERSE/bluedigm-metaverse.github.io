@@ -3,8 +3,11 @@ import Image from '../../components/common/Image'
 import { Link } from 'gatsby'
 
 const Header: FunctionComponent = function () {    
-    function pathIncludes( word: string ) {
-      return window.location.href.includes(word) ? "on" : ""
+    function pathIncludes(word: string) {
+      if (typeof window !== 'undefined') {
+        return window.location.href.includes(word) ? 'on' : '';
+      }
+      return '';
     }
 
     useEffect(() => {
