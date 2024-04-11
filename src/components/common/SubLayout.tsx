@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactNode, useEffect } from 'react'
 import styled from '@emotion/styled'
 
-import GlobalStyle from './GlobalStyle'
+// import GlobalStyle from './GlobalStyle'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -35,7 +35,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
 
   return (
     <>
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
       <Header />
       <SubWrapper>{children}</SubWrapper>
       <Footer />

@@ -59,6 +59,7 @@ export const selectCultureList = graphql`
               childImageSharp {
                 gatsbyImageData(width: 1560, height: 700)
               }
+              publicURL
             }
             startedDate(formatString: "YYYY.MM.DD.")
             endedDate(formatString: "YYYY.MM.DD.")

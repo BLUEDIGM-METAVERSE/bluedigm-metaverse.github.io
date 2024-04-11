@@ -11,21 +11,20 @@ const ExperienceList: FunctionComponent<ExperienceListProps> = function ({
   experiences,
 }) {
   return (
-    <ExperienceListWrapper>
-      {experiences.map(({ node: { id, frontmatter } }: ExperienceListItemType) => (
-        <ExperienceItem {...frontmatter} link={'/experience'} key={id} />
+    <ul className="row ex-list-wrap">
+      {
+      experiences.map(
+        ({ 
+          node: { 
+            id, 
+            fields: { slug },
+            frontmatter
+          } 
+      }: ExperienceListItemType) => (
+        <ExperienceItem {...frontmatter} link={slug} key={id} />
       ))}
-    </ExperienceListWrapper>
+    </ul>
   )
 }
 
 export default ExperienceList
-
-/**
- * Styled
- */
-const ExperienceListWrapper = styled.section`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px 16px;
-`

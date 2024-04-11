@@ -1,13 +1,15 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Image from '../../components/common/Image';
+import { Link, graphql, useStaticQuery } from 'gatsby'
+import Image from '../../components/common/Image'
 import styled from '@emotion/styled'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { useMembersQuery } from '../../queries/member.query'
 
-const KeyVisual: React.FC = () => {
-    const cultures = useStaticQuery(graphql`
+const Culture: React.FC = () => {
+    const members = useMembersQuery();
+    const data = useStaticQuery(graphql`
     query {
-        allMarkdownRemark(
+        cultures: allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/(culture)/" } }
           sort: [
             { frontmatter: { startedDate: DESC } }
@@ -25,9 +27,10 @@ const KeyVisual: React.FC = () => {
                 summary
                 tag
                 thumbnail {
-                  childImageSharp {
-                    gatsbyImageData
-                  }
+                    publicURL
+                    childImageSharp {
+                        gatsbyImageData
+                    }
                 }
                 startedDate(formatString: "YYYY.MM.DD.")
                 endedDate(formatString: "YYYY.MM.DD.")
@@ -37,7 +40,7 @@ const KeyVisual: React.FC = () => {
         }
       }
   `);
-  
+
     return (
         <>
             <h2 className="visually-hidden">팀 문화 소개</h2>
@@ -65,69 +68,37 @@ const KeyVisual: React.FC = () => {
                     </dl>
 
                     <ul className="row">
-                        {cultures.allMarkdownRemark.edges.map(({ node }) => (
+                        {data.cultures.edges.map(({ node }) => (
                             <li className="col-sm-4 col-md-4 col-lg-4">
-                                <a href="/culture/">
+                                <Link to={node.fields.slug}>
                                     <span>{node.frontmatter.tag}<p>{node.frontmatter.startedDate} ~ {node.frontmatter.endedDate}</p></span>
                                     <strong>{node.frontmatter.title} {node.frontmatter.gatsbyImageData}</strong>
-                                    <Thumbnail image={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData} alt={node.title} />
-                                </a>
+                                    <img src={node.frontmatter.thumbnail.publicURL} alt={node.title} />
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </div>
-            </div>
-            <div className="who">
-                <strong>우리는 누구일까요?</strong>
-                <div className="member">
-                    <ul>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                        <li>
-                            <Image path="/images/mem-ssong.webp" alt="송호민" />
-                        </li>
-                    </ul>
+                <div className="who">
+                    <strong>우리는 누구일까요?</strong>
+                    <div className="row">
+                        {members.map(({ node }) => (
+                            <div className="profile col-sm-4 col-md-6 col-lg-6">
+                                <img src={node.frontmatter.thumbnail.publicURL} alt={node.name} />
+                                <dl>
+                                    <dt>{node.frontmatter.name}<span>{node.frontmatter.position}</span></dt>
+                                    <dd>{node.frontmatter.duty}</dd>
+                                    <dd>{node.frontmatter.alia}</dd>
+                                </dl>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>
     )
   }
   
-export default KeyVisual
+export default Culture
 
-const Thumbnail = styled(GatsbyImage)`
-  height: 700px;
-  margin-bottom: 40px;
-  object-fit: cover;
-`
+const Thumbnail = styled(GatsbyImage)``

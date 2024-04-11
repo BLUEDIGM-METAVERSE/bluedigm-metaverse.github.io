@@ -4,27 +4,28 @@ import styled from '@emotion/styled'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 
-type CultureItemProps = CultureFrontmatterType & { link: string }
+type CultureItemProps = CultureFrontmatterType & { link: string}
 
 const CultureItem: FunctionComponent<CultureItemProps> = function ({
   title,
   summary,
   thumbnail: {
     childImageSharp: { gatsbyImageData },
+    publicURL
   },
   link,
 }) {
   return (
     <li className="col-sm-4 col-md-12 col-lg-12">
-        <a href="./view2.html">
+        <Link to={link}>
             <div className="thum">
-              <Thumbnail image={gatsbyImageData} alt="Culture Thumbnail" />
+              <img src={publicURL} alt={title} />
             </div>
             <dl>
                 <dt>{title}</dt>
                 <dd>{summary}</dd>
             </dl>
-        </a>
+        </Link>
     </li>
   )
 }

@@ -2,8 +2,7 @@ import { MemberListItemType } from '../../types/member.type'
 import { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import Layout from 'components/common/Layout'
-import MemberList from 'components/member/MemberList'
+import Layout from 'components/common/SubLayout'
 
 type MemberPageProps = {
   location: {
@@ -27,7 +26,6 @@ const MemberPage: FunctionComponent<MemberPageProps> = function ({
       <div className="container">
           <div className="row">
               <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">메타버스팀 팀원을 소개합니다</div>
-              <MemberList members={edges} />
           </div>
       </div>
     </Layout>

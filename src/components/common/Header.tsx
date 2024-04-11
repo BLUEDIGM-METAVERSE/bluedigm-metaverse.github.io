@@ -43,7 +43,7 @@ const Header: FunctionComponent = function () {
                 <li><Link to="/culture" className={pathIncludes('culture')} >문화 이야기</Link></li>
                 <li><Link to="/tech" className={pathIncludes('tech')} >기술 이야기</Link></li>
                 <li><Link to="/experience" className={pathIncludes('experience')} >경험 저장소</Link></li>
-                <li><Link to="/member" className={pathIncludes('member')} >팀원 소개</Link></li>
+                {/*<li><Link to="/member" className={pathIncludes('member')} >팀원 소개</Link></li>*/}
             </ul>
         </nav>
         <div className="search-open"></div>

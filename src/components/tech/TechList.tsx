@@ -15,35 +15,27 @@ const TechList: FunctionComponent<TechListProps> = function ({
   selectedTag,
   tech,
 }) {
-  const { containerRef, techList }: useInfiniteScrollType = useInfiniteScroll(
+  const { techList }: useInfiniteScrollType = useInfiniteScroll(
     selectedTag,
     tech,
   )
 
   return (
-    <TechListWrapper ref={containerRef}>
+    <ul className="row tech-list-wrap">
       {techList.map(
         ({
           node: {
             id,
             fields: { slug },
             frontmatter,
+            excerpt
           },
         }: TechListItemType) => (
-          <TechItem {...frontmatter} link={slug} key={id} />
+          <TechItem {...frontmatter} link={slug} excerpt={excerpt} key={id} />
         ),
       )}
-    </TechListWrapper>
+    </ul>
   )
 }
 
 export default TechList
-
-/**
- * Styled
- */
-const TechListWrapper = styled.section`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px 16px;
-`

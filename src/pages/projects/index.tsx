@@ -1,6 +1,6 @@
 import { ProjectListItemType } from '../../types/project.types'
 import React, { FunctionComponent } from 'react'
-import Layout from 'components/common/Layout'
+import Layout from 'components/common/SubLayout'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import ProjectList from 'components/project/ProjectList'

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useMemo } from 'react'
 import { graphql } from 'gatsby'
-import Layout from 'components/common/Layout'
+import Layout from 'components/common/SubLayout'
 import styled from '@emotion/styled'
 import queryString, { ParsedQuery } from 'query-string'
 import TechList from 'components/tech/TechList'
@@ -90,6 +90,7 @@ export const selectTechList = graphql`
             writer
             tags
           }
+          excerpt
         }
       }
     }

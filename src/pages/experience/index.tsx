@@ -1,6 +1,6 @@
 import { ExperienceListItemType } from '../../types/experience.types'
 import React, { FunctionComponent } from 'react'
-import Layout from 'components/common/Layout'
+import Layout from 'components/common/SubLayout'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import ExperienceList from 'components/experience/ExperienceList'
@@ -61,6 +61,7 @@ export const selectExperienceList = graphql`
               childImageSharp {
                 gatsbyImageData(width: 768, height: 600)
               }
+              publicURL
             }
           }
         }

@@ -12,6 +12,7 @@ export type MemberFrontmatterType = {
   department: string
   position: string
   duty: string
+  alia: string
   introduce: string
 }
 

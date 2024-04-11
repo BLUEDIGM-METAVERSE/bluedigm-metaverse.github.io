@@ -60,7 +60,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const PostDetailComponent = path.resolve(
     __dirname,
-    'src/components/tech/TechDetail.tsx',
+    'src/components/common/PostDetail.tsx',
   );
 
   const generatePostPage = ({
