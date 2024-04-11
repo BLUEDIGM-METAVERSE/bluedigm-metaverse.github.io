@@ -53,8 +53,6 @@ export const usePagingQuery = (currentSlug: string, filterRegex: string) => {
 
     const findIndex = pageData.findIndex((item) => item.node.fields.slug === currentSlug);
     
-    //console.log(findIndex);
-
     let previousSlug = ''
     let nextSlug = ''
     if (findIndex !== -1) {
@@ -63,12 +61,8 @@ export const usePagingQuery = (currentSlug: string, filterRegex: string) => {
         const nextIndex = currentIndex + 1
         previousSlug = pageData[previousIndex]?.node.fields.slug || ''
         nextSlug = pageData[nextIndex]?.node.fields.slug || ''
-
-        //console.log(findData);
     }
     
-    //console.log(previousSlug);
-    //console.log(nextSlug);
     return { previousSlug, nextSlug }
 };
     

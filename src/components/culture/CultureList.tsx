@@ -11,18 +11,6 @@ type CultureListProps = {
 const CultureList: FunctionComponent<CultureListProps> = function ({
   cultures,
 }) {
-  console.log(cultures)
-  
-  cultures.map(
-    ({
-      node
-    }) => {
-      console.log(node);
-      console.log(node.fields.slug);
-    }
-  )
-  
-  
   return (
     <ul className="row culture-list-wrap">
       {cultures.map(
