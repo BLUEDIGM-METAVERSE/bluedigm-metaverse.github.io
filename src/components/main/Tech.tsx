@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import { getUser } from '../../utils/commonFunctions'
+import { getUser, getImage } from '../../utils/commonFunctions'
+import { useMembersQuery } from '../../queries/member.query'
 
 const Tech: React.FC = () => {
+    const members = useMembersQuery();
     const data = useStaticQuery(graphql`
     query {
         techs: allMarkdownRemark(
@@ -27,30 +29,6 @@ const Tech: React.FC = () => {
             }
           }
         }
-        members : allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/(member)/" } }
-          sort: [{ frontmatter: { orderNum: ASC } }, { frontmatter: { name: ASC } }]
-        ) {
-          edges {
-            node {
-                id
-                fields {
-                    slug
-                }
-                frontmatter {
-                    name
-                    thumbnail {
-                        childImageSharp {
-                            gatsbyImageData
-                        }
-                    }
-                    department
-                    position
-                    duty
-                }
-            }
-          }
-        }
       }
   `);
   
@@ -63,7 +41,7 @@ const Tech: React.FC = () => {
                             <dt>우리의 기가막힌 노하우를 보여드릴게요</dt>
                             <dd>모두의 가치를 더하기 위해 우리는 매일 소통하고 공유한 하나의 경험을 서로 나누어 더 많은 경험을 얻어가요.</dd>
                             <dd>
-                                <a href="./tech.html">더 많이 보고 싶어요
+                                <a href="/tech">더 많이 보고 싶어요
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 80" fill="none">
                                             <path d="M10 5H73C74.1046 5 75 5.89543 75 7V70" stroke="currentColor" strokeWidth="10" stroke-linecap="round"/>
@@ -102,10 +80,10 @@ const Tech: React.FC = () => {
                                     </dl>
                                 </div>
                                 <div className="card-bot">
-                                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAxMjlfODEg%2FMDAxNjc0OTk5NzQxODI3.bsY8Pp096lvyHW58LhZN75yFCzKee2-uP0Xgi2vZjX8g.pGWyDF1uYPZltBU6lsY2c5STziIOiH5SDn0lKYvN-LAg.JPEG.gmldud3540%2FIMG_6904.jpg&type=a340" alt="" />
+                                    <img src={getImage(node.frontmatter.writer, members)} alt={node.frontmatter.writer} />
                                     <span>
                                         <p>{node.frontmatter.writer}</p>
-                                        <p>{getUser(node.frontmatter.writer, data.members.edges)}</p>
+                                        <p>{getUser(node.frontmatter.writer, members)}</p>
                                     </span>
                                 </div>
                             </Link>

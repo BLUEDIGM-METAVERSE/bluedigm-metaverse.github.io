@@ -6,6 +6,7 @@ endedDate: '2023-04-07'
 date: '2023-04-07'
 summary: '2023년 Metaverse팀 워크샵이야기'
 tag: '#대부도 #팀워크샵'
+writer: '관리자'
 ---
 
 # Digital Platform 본부 Metaverse Team 워크샵!
