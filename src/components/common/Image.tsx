@@ -6,15 +6,8 @@ const Image: React.FC<{ path: string; alt: string }> = ({ path, alt }) => {
       allFile(filter: {sourceInstanceName: {eq: "images"}}) {
         nodes {
           id
-          name
           relativePath
-          extension
           publicURL
-          childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
         }
       }
     }

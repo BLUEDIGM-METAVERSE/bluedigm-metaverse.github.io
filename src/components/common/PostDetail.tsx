@@ -13,11 +13,9 @@ interface PostDetailProps {
         node: {
           html: string
           frontmatter: {
-            category: string
             title: string
             date: string
             writer: string
-            tags: string[]
           }
         }
       }[]
@@ -35,7 +33,7 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
   const {
     node: {
       html,
-      frontmatter: { category, title, date, writer, tags },
+      frontmatter: { title, date, writer },
     },
   } = edges[0]
 
@@ -56,6 +54,8 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
       postTitle = '좋은 경험은<br />나눌수록 커져요';
     }
   }
+
+console.log(edges);
 
   const { previousSlug, nextSlug } = usePagingQuery(currentSlug, listPath);
 
@@ -123,7 +123,7 @@ export const queryMarkdownDataBySlug = graphql`
           frontmatter {
             category
             title
-            date(formatString: "YYYY.MM.DD.")
+            date
             writer
             tags
           }
