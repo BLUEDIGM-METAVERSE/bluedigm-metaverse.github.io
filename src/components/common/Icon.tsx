@@ -6,15 +6,8 @@ const Icon: React.FC<{ path: string; alt: string }> = ({ path, alt }) => {
       allFile(filter: {sourceInstanceName: {eq: "icons"}}) {
         nodes {
           id
-          name
           relativePath
-          extension
           publicURL
-          childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
         }
       }
     }

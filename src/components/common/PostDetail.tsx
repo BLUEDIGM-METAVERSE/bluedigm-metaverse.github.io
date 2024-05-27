@@ -13,11 +13,9 @@ interface PostDetailProps {
         node: {
           html: string
           frontmatter: {
-            category: string
             title: string
             date: string
             writer: string
-            tags: string[]
           }
         }
       }[]
@@ -35,7 +33,7 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
   const {
     node: {
       html,
-      frontmatter: { category, title, date, writer, tags },
+      frontmatter: { title, date, writer },
     },
   } = edges[0]
 
@@ -123,7 +121,7 @@ export const queryMarkdownDataBySlug = graphql`
           frontmatter {
             category
             title
-            date(formatString: "YYYY.MM.DD.")
+            date
             writer
             tags
           }

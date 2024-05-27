@@ -10,6 +10,7 @@ export type ExperienceType = {
       }
       startedDate: string
       endedDate: string
+      date: string
     }
   }
 }
@@ -24,6 +25,7 @@ export type ExperienceFrontmatterType = {
   }
   startedDate: string
   endedDate: string
+  date: string
 }
 
 export type ExperienceListItemType = {

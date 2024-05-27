@@ -3,13 +3,11 @@ import Image from '../../components/common/Image'
 import { Link } from 'gatsby'
 
 const Header: FunctionComponent = function () {    
-    function pathIncludes(word: string) {
-      if (typeof window !== 'undefined') {
-        return window.location.href.includes(word) ? 'on' : '';
-      }
-      return '';
+    let menuPath = '';
+    if (typeof window !== 'undefined') {
+      menuPath = window.location.href;
     }
-
+    
     useEffect(() => {
       const handleMenuOpenClick = () => {
         document.querySelector('.menuwrap').classList.add('on');
@@ -40,10 +38,9 @@ const Header: FunctionComponent = function () {
         <nav>
             <h2 className="visually-hidden">메뉴</h2>
             <ul>
-                <li><Link to="/culture" className={pathIncludes('culture')} >문화 이야기</Link></li>
-                <li><Link to="/tech" className={pathIncludes('tech')} >기술 이야기</Link></li>
-                <li><Link to="/experience" className={pathIncludes('experience')} >경험 저장소</Link></li>
-                {/*<li><Link to="/member" className={pathIncludes('member')} >팀원 소개</Link></li>*/}
+                <li><Link to="/culture" className={menuPath.includes('culture') ? 'on' : ''} >문화 이야기</Link></li>
+                <li><Link to="/tech" className={menuPath.includes('tech') ? 'on' : ''} >기술 이야기</Link></li>
+                <li><Link to="/experience" className={menuPath.includes('experience') ? 'on' : ''} >경험 저장소</Link></li>
             </ul>
         </nav>
         {/* <div className="search-open"></div>
