@@ -2,7 +2,7 @@
 category: 'Tech'
 title: 'MySQL 스토어드 프로시저 리턴값이 상수값이 아닐 수 있다고???'
 date: '2024-04-16'
-tags: ['DETERMINISTIC','MySQL','대체이말은무슨말인가','성능']
+tags: ['DETERMINISTIC','MySQL']
 writer: '최일주'
 ---
 
