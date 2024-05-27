@@ -92,15 +92,15 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
                           <dd className="view-btn-wrap">
                               <Link to={previousSlug} className={previousSlug ? '' : 'disabled'}>
                                   <span>
-                                      <Image path="/images/pre-arrow.svg" alt="이전" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 200 200" fill="none"><path d="M143 189L56.0259 102.026C55.2448 101.245 55.2448 99.9785 56.0259 99.1974L143 12.2233" stroke="currentColor" stroke-width="20" stroke-linecap="round"></path></svg>
                                   </span>
-                                  이전
+                                  최근
                               </Link>
                               <Link to={listPath}>목록</Link>
                               <Link to={nextSlug} className={nextSlug ? '' : 'disabled'}>
-                                  다음
+                                  예전
                                   <span>
-                                      <Image path="/images/next-arrow.svg" alt="다음" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 200 200" fill="none"><path d="M143 189L56.0259 102.026C55.2448 101.245 55.2448 99.9785 56.0259 99.1974L143 12.2233" stroke="currentColor" stroke-width="20" stroke-linecap="round"></path></svg>
                                   </span>
                               </Link>
                           </dd>

@@ -9,7 +9,7 @@ type LayoutProps = {
   children: ReactNode
 }
 
-const MainWrapper = styled.main``
+const MainWrapper = styled.article``
 
 const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   
