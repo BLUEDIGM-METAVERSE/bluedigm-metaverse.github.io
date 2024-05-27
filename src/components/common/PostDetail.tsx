@@ -55,8 +55,6 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
     }
   }
 
-console.log(edges);
-
   const { previousSlug, nextSlug } = usePagingQuery(currentSlug, listPath);
 
   return (
