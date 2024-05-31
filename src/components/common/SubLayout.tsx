@@ -18,10 +18,12 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
       const scroll = window.scrollY;
       const header = document.querySelector('header');
       if (header) {
-        if (scroll > 100) {
-          header.style.backgroundColor = '#fff';
+        if (scroll > 50) {
+          header.style.backdropFilter = 'blur(5px)';
+          header.style.height = '60px'
         } else {
-          header.style.backgroundColor = '#ffffff00';
+          header.style.backdropFilter = 'blur(0px)';
+          header.style.height = '100px'
         }
       }
     };

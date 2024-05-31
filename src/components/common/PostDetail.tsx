@@ -45,10 +45,10 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
   if (typeof window !== 'undefined') {
     if (window.location.pathname.includes("/culture/")) {
       listPath = "/culture/";
-      postTitle = '우리의 이야기를<br />문화로 만들어요';
+      postTitle = '우리의 이야기로<br />문화를 만들어요';
     } else if (window.location.pathname.includes("/tech/")) {
       listPath = "/tech/";
-      postTitle = '우리의 기술 경험을 공유해요';
+      postTitle = 'IT 트렌드와<br />기술을 공유해요';
     } else if (window.location.pathname.includes("/experience/")) {
       listPath = "/experience/";
       postTitle = '좋은 경험은<br />나눌수록 커져요';

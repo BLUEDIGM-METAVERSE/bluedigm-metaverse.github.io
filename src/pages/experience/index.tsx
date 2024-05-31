@@ -23,7 +23,9 @@ const ExperiencePage: FunctionComponent<ExperiencePageProps> = function ({
 }) {
   return (
     <Layout>
-      <div className="sub-keyvisual"></div>
+      <div className="sub-keyvisual">
+        <span>Experience</span>
+      </div>
       <div className="container">
           <div className="row">
               <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">좋은 경험은<br />나눌수록 커져요</div>

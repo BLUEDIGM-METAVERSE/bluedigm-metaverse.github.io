@@ -7,6 +7,7 @@ import Introduction from 'components/main/Introduction'
 import Tech from 'components/main/Tech'
 import Culture from 'components/main/Culture'
 import Bx from 'components/main/Bx'
+import Navi from 'components/main/Navi'
 import styled from '@emotion/styled'
 
 type IndexPageProps = {}
@@ -31,8 +32,11 @@ const IndexPage: FunctionComponent<IndexPageProps> = function () {
       <Section className='culture-main'>
         <Culture />
       </Section>
-      <Section className='bx'>
+      <Section className='bx' id='bx'>
         <Bx />
+      </Section>
+      <Section className='navi'>
+        <Navi />
       </Section>
     </Layout>
   )

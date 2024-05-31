@@ -22,10 +22,12 @@ const CulturePage: FunctionComponent<CulturePageProps> = function ({
 }) {
   return (
     <Layout> {/* main */}
-      <div className="sub-keyvisual"></div>
+      <div className="sub-keyvisual">
+        <span>Culture</span>
+      </div>
       <div className="container">
           <div className="row">
-              <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">우리의 행동이<br />문화를 만들어요</div>
+              <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">우리의 이야기로<br />문화를 만들어요</div>
               <CultureList cultures={edges} />
           </div>
       </div>

@@ -1,12 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 
-const FooterWrapper = styled.footer`
-  padding: 40px 0;
-  text-align: center;
-  font-size: 12px;
-  color: #bfbfbf;
-`
+const FooterWrapper = styled.footer``
 
 const Footer: FunctionComponent = function () {
   return <FooterWrapper>© 2024 Metaverse Team</FooterWrapper>

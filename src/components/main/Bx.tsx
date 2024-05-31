@@ -41,7 +41,7 @@ const Bx: React.FC = () => {
                     <dt className="col-sm-4 col-md-3 col-lg-3">Color System</dt>
                     <dd className="col-sm-4 col-md-9 col-lg-9">다양한 개성이 모였으니 보색을 분할하여 포인트 컬러로 사용하였고<br />모두가 모여 하나가 되면 결국 Black이 되니까 메인 컬러는 Black으로 사용해요.<p><Image path="/images/Group 96.png" alt="" /></p></dd>
                 </dl>
-                <dl className="row">
+                <dl className="row drop-shadow">
                     <dt className="col-sm-4 col-md-3 col-lg-3">Logo System</dt>
                     <dd className="col-sm-4 col-md-9 col-lg-9">우리의 디자인 원칙인 둥글고 입체적인 메타포를 바탕으로 둥글고 굵은 글씨로 만들었으며<br />현실에 안주하지 않고 성장하기 위해 매일매일 한단계씩 나아가는 모습을 입체적으로 표현하여 우리다운 로고를 만들었어요.<p><Image path="/images/logo.svg" alt="" /></p><p><Image path="/images/symbol.svg" alt="" /></p></dd>
                 </dl>

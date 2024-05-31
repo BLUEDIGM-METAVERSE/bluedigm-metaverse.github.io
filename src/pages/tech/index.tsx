@@ -55,10 +55,12 @@ const TechPage: FunctionComponent<TechPageProps> = function ({
 
   return (
     <Layout>
-      <div className="sub-keyvisual"></div>
+      <div className="sub-keyvisual">
+        <span>Tech Story</span>
+      </div>
       <div className="container">
           <div className="row">
-              <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">우리의 기술 경험을<br /> 공유해요</div>
+              <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">IT 트렌드와<br />기술을 공유해요</div>
               <TagList selectedTag={selectedTag} tagList={tagList} />
               <TechList selectedTag={selectedTag} tech={edges} />
           </div>

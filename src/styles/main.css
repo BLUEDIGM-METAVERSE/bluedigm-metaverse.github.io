@@ -355,6 +355,18 @@ to { transform: translateX(-50%); }
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~767 mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile */
+html {
+    background-color: #4006E5;
+}
+
+body {
+    background-color: #fff;
+}
+
+::selection {
+    color: aqua;
+    background-color: #000;
+}
 
 header {
     display: flex;
@@ -459,15 +471,32 @@ header nav {
 }
 
 .m-slogan {
-    font-family: 'yg-jalnan';
-    font-weight: 400;
-    font-size: 3.750rem;
     display: block;
     align-items: normal;
     height: auto;
     position: absolute;
     left: 4%;
     bottom: 4%;
+}
+
+.m-slogan strong {
+    font-family: 'yg-jalnan';
+    font-weight: 400;
+    font-size: 3.750rem;
+}
+
+.m-slogan p {
+    margin: 16px;
+    display: table-cell;
+}
+
+.m-slogan span {
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    word-break: keep-all;
 }
 
 .m-photo {
@@ -613,6 +642,10 @@ header nav {
     background-size: cover;
 }
 
+.main-slogan {
+    display: none;
+}
+
 /* story-title */
 .story-title {
     position: relative;
@@ -620,6 +653,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 9;
 }
 
 .story-slogan {
@@ -1160,13 +1194,36 @@ header nav {
     padding: 0 24px;
 }
 
+.bx .drop-shadow img {
+    filter: drop-shadow(2px 2px 2px aqua);
+}
+
+.m-navi {
+    position: fixed;
+    top: 50vh;
+    right: 30px;
+    animation: badge-ani 2.2s ease-in-out alternate-reverse infinite;
+    z-index: 9999;
+}
+
+.m-navi li a {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 8px;
+    color: #000;
+    font-weight: 800;
+    font-size: 0.6875rem;
+    box-shadow: 1px 1px 0px #9BF953, 2px 2px 0px #000000, 3px 3px 0px #B658FF, 4px 4px 0px #000000, 5px 5px 0px #FC875E;
+}
+
 /* footer */
 footer {
     background-color: #f2f2f2;
     font-weight: 400;
     font-size: 0.857rem;
-    color: #bfbfbf;
-    padding: 40px 0;
+    color: #999;
+    padding: 12px 0;
     text-align: center;
     vertical-align: middle;
 }
@@ -1185,8 +1242,12 @@ main {
     left: 0;
     height: 300px;
     width: 100vw;
-    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(90deg, #5CAFDA 0%, #74B2FD 49.1%, #B658FF 100%); */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(180deg, rgba(0, 255, 255, 0.1) 0%, #fff 100%);
     z-index: 1111;
+}
+
+.sub-keyvisual span {
+    display: none;
 }
 
 .sub-slogan {
@@ -1197,6 +1258,7 @@ main {
     font-family: 'yg-jalnan';
     font-weight: 400;
     font-size: 2.500rem;
+    color: #4006E5;
 }
 
 /* culture */
@@ -1363,6 +1425,7 @@ main {
     border-radius: 20px;
     box-shadow: 4px 4px 0px #000;
     overflow: hidden;
+    background-color: #000;
 }
 
 .ex-list-wrap .ex-tit {
@@ -1382,7 +1445,8 @@ main {
 
 .ex-list-wrap .thum {
     position: relative;
-    height: 300px;
+    width: 100%;
+    height: auto;
     z-index: 1111;
 }
 
@@ -1607,19 +1671,27 @@ main {
         box-shadow: 0 0 0 1px #000 inset;
         border-radius: 2px;
     }
+
+    nav ul li:nth-child(2) a::after {
+        background-color: #B658FF;
+    }
+
+    nav ul li:nth-child(3) a::after {
+        background-color: #fc875e;
+    }
     
     nav ul li a:hover::after {
         width: 100%;
-        height: 3px;
+        height: 4px;
     }
 
     nav li a {
         position: relative;
         display: block;
         text-align: center;
-        padding: 4px 12px 6px;
+        padding: 4px 12px 8px;
         font-weight: 700;
-        font-size: 0.875rem;
+        font-size: 1rem;
         color: #4d4d4d;
     }
 
@@ -1632,7 +1704,7 @@ main {
     }
 
     nav ul li a.on::after {
-        height: 3px;
+        height: 4px;
         width: 100%;
         position: absolute;
         bottom: 0px;
@@ -1641,7 +1713,15 @@ main {
         content: "";
         background-color: #9bf953;
         box-shadow: 0 0 0 1px #000 inset;
-        border-radius: 2px;
+        border-radius: 4px;
+    }
+
+    nav ul li:nth-child(2) a.on::after {
+        background-color: #B658FF;
+    }
+
+    nav ul li:nth-child(3) a.on::after {
+        background-color: #fc875e;
     }
 
     /* main page */
@@ -1654,14 +1734,32 @@ main {
     }
 
     .m-slogan {
-        font-weight: 400;
-        font-size: 8.125rem;
-        display: flex;
+        display: block;
         align-items: center;
-        height: 100vh;
+        height: auto;
         position: relative;
         left: 0;
         bottom: 0;
+        align-content: space-evenly;
+    }
+
+    .m-slogan strong {
+        font-family: 'yg-jalnan';
+        font-weight: 400;
+        font-size: 8.125rem;
+    }
+
+    .m-slogan p {
+        margin: 16px;
+    }
+
+    .m-slogan span {
+        background-color: #000;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.5em;
+        word-break: keep-all;
     }
 
     .m-photo {
@@ -1804,6 +1902,22 @@ main {
         background-repeat: no-repeat;
         background-position: center top;
         background-size: cover;
+    }
+    
+    .main-slogan {
+        display: block;
+        /* mix-blend-mode: difference; */
+        font-family: 'yg-jalnan';
+        font-weight: 400;
+        font-size: 160px;
+        letter-spacing: -5px;
+        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.50);
+        color: #fff;
+        position: absolute;
+        left: -12%;
+        bottom: 4%;
+        opacity: 50%;
+        z-index: 1;
     }
 
     /* story-title */
@@ -2427,8 +2541,23 @@ main {
         left: 0;
         height: 520px;
         width: 100vw;
-        /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(90deg, #5CAFDA 0%, #74B2FD 49.1%, #B658FF 100%); */
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(180deg, rgba(0, 255, 255, 0.1) 0%, #fff 100%);
         z-index: 1111;
+    }
+
+    .sub-keyvisual span {
+        display: block;
+        /* mix-blend-mode: difference; */
+        font-family: 'yg-jalnan';
+        font-weight: 400;
+        font-size: 160px;
+        letter-spacing: -5px;
+        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.50);
+        color: #fff;
+        position: absolute;
+        right: 0%;
+        top: 120px;
+        opacity: 50%;
     }
 
     .sub-slogan {
@@ -2437,25 +2566,43 @@ main {
         display: flex;
         align-items: center;
         font-weight: 400;
-        font-size: 6.250rem;
+        font-size: 5.250rem;
     }
 
     /* culture */
     .culture-list-wrap li {
         position: relative;
-        margin-bottom: 120px;
+        margin-bottom: 40px;
     }
 
     .culture-list-wrap li a {
-        display: block;
+        display: flex;
+        align-items: center;
+        background-color: #9BF95210;
+        border-radius: 100vw;
+        box-shadow: inset -5px -5px 0px rgba(0, 0, 0, 0.2);
+        border: 2px solid #000;
+    }
+
+    .culture-list-wrap li:nth-child(2n) a {
+        background-color: #FFD22710;
+    }
+
+    .culture-list-wrap li a:hover dl {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        margin-left: 0;
+        transition: all 0.2s linear;
     }
 
     .culture-list-wrap .thum {
         position: relative;
         width: 100%;
-        height: 40vh;
+        height: 45vh;
         overflow: hidden;
         border-radius: 100vw;
+        display: flex;
     }
     
     .culture-list-wrap .thum img {
@@ -2464,17 +2611,20 @@ main {
         object-fit: cover;
     }
 
+    .culture-list-wrap dl {
+        margin-left: 20px;
+    }
+
     .culture-list-wrap dt {
         font-weight: 400;
-        font-size: 3.750rem;
-        margin: 40px 0 20px;
+        font-size: 3.250rem;
+        margin: 0px 0 5px;
     }
 
     .culture-list-wrap dd {
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 2.500rem;
         color: #4d4d4d;
-        width: 50%;
         word-break: keep-all;
     }
 
@@ -2637,7 +2787,8 @@ main {
 
     .ex-list-wrap .thum {
         position: relative;
-        height: 600px;
+        width: 100%;
+        height: auto;
         z-index: 1111;
     }
 
@@ -2680,6 +2831,11 @@ main {
     .m-slogan {
         font-weight: 400;
         font-size: 9.000rem;
+        line-height: 0.5em;
+    }
+
+    .m-slogan p {
+        width: 28vw;
     }
 
     .m-photo {
