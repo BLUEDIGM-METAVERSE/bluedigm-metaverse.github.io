@@ -488,14 +488,15 @@ header nav {
 .m-slogan p {
     margin: 16px;
     display: table-cell;
+    opacity: 98%;
 }
 
 .m-slogan span {
-    background-color: #000;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1.5em;
+    background-color: #FFD227;
+    color: #000;
+    font-weight: 400;
+    font-size: 1.000rem;
+    line-height: 1.6em;
     word-break: keep-all;
 }
 
@@ -1754,11 +1755,8 @@ main {
     }
 
     .m-slogan span {
-        background-color: #000;
-        color: #fff;
-        font-weight: 700;
-        font-size: 1.5rem;
-        line-height: 1.5em;
+        font-size: 1.50rem;
+        line-height: 1.6em;
         word-break: keep-all;
     }
 
@@ -1917,7 +1915,7 @@ main {
         left: -12%;
         bottom: 4%;
         opacity: 50%;
-        z-index: 1;
+        z-index: -1;
     }
 
     /* story-title */

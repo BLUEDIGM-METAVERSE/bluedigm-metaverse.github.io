@@ -9,7 +9,7 @@ const KeyVisual: React.FC = () => {
                 <div className="row">
                     <div className="col-sm-4 col-md-6 col-lg-6 m-slogan">
                         <strong>가치를<br />만들어요</strong>
-                        <p><span>꾸준한 자기 계발과 협업을 바탕으로 개개인이 아닌 같은 곳을 바라보는 팀으로 프로젝트에 임합니다.</span></p>
+                        <p><span>&nbsp;자기 계발을 바탕으로 원활한 협업과 가치를 만들어내며&nbsp;<br />&nbsp;어떠한 경험이라도 이는 곧 팀으로서 성장해 나갑니다.&nbsp;</span></p>
                     </div>
                     <div className="col-sm-4 col-md-6 col-lg-6 m-photo">
                         <img src="https://www.mathpro.co.kr/img/main/main_visual03.jpg" alt="" />
