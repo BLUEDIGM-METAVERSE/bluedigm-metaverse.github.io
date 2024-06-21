@@ -4,7 +4,7 @@ name: '관리자'
 thumbnail: './images/profile_admin.webp'
 department: 'Metaverse 1팀'
 position: '블로그 관리자'
-duty: 'team blog admin'
+duty: '블로그 관리자'
 alia: '블로그 관리자'
 introduce: '안녕하세요. 관리자입니다.'
 ---
