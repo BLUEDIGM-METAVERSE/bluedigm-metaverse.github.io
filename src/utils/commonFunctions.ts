@@ -5,7 +5,7 @@ export function getUser(writer: string, edges: any): string {
 
 export function getImage(writer: string, edges: any): string {
     const matchedMember = edges.find(({ node: memberNode }) => memberNode.frontmatter.name === writer);
-    return matchedMember ? matchedMember.node.frontmatter.thumbnail.publicURL : '/images/metaflow.png';
+    return matchedMember ? matchedMember.node.frontmatter.thumbnail.publicURL : '../assets/images/metaflow.png';
 }
 
 export const getPageSlugs = (currentIndex: number, data: any) => {
