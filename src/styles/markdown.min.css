@@ -103,11 +103,29 @@
     top: -.5em
 }
 
+.markdown-body>p {
+    overflow-style: auto;
+    height: max-content;
+}
+.markdown-body>p>.gatsby-resp-image-wrapper {
+    padding-bottom: calc();
+}
+span.gatsby-resp-image-background-image {
+    padding-bottom: initial;
+}
 .markdown-body img {
     border-style: none;
     max-width: 100%;
     box-sizing: content-box;
     background-color: #fff
+}
+
+.markdown-body img.gatsby-resp-image-image {
+    object-fit: cover;
+    aspect-ratio: inherit;
+}
+.markdown-body video {
+    width: 768px;
 }
 
 .markdown-body code,
@@ -681,6 +699,8 @@
 .markdown-body table img {
     background-color: transparent
 }
+
+
 
 .markdown-body img[align=right] {
     padding-left: 20px

@@ -19,7 +19,7 @@ writer: '안병국'
 
 - 아기 울음 소리를 감지하고 분석하여 각 육아 상황에 맞는 솔루션 실행
 
-<iframe width="866" height="487" src="https://www.youtube.com/embed/rjFppkhjvwE" title="Introducing Cappella!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<center><iframe width="866" height="487" src="https://www.youtube.com/embed/rjFppkhjvwE" title="Introducing Cappella!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
 
 ## [Beauty] L'Oréal (Beauty Genius)
 
@@ -31,7 +31,7 @@ writer: '안병국'
 
 - Open AI와 협업을 통해 개발한 자신을 둘러싼 환경에서 스스로 판단하고 행동하는 휴머노이드 로봇
 
-<iframe width="866" height="487" src="https://www.youtube.com/embed/Sq1QZB5baNw" title="Figure Status Update - OpenAI Speech-to-Speech Reasoning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<center><iframe width="866" height="487" src="https://www.youtube.com/embed/Sq1QZB5baNw" title="Figure Status Update - OpenAI Speech-to-Speech Reasoning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
 
 ## [Smart Home] Samsung (AI Vision Inside)
 

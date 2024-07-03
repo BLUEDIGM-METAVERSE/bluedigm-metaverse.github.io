@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 export function getUser(writer: string, edges: any): string {
     const matchedMember = edges.find(({ node: memberNode }) => memberNode.frontmatter.name === writer);
-    return matchedMember ? matchedMember.node.frontmatter.department + "의 " + matchedMember.node.frontmatter.duty : "";
+    return matchedMember ? matchedMember.node.frontmatter.department + "의 " + matchedMember.node.frontmatter.duty : "metaflow";
 }
 
 export function getImage(writer: string, edges: any): string {
