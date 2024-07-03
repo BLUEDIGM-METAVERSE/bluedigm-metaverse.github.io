@@ -3147,7 +3147,7 @@ main {
     .culture-main .black-box li a img {
         top: 108px;
         left: 20px;
-        width: 340px;
+        width: 67%; /*************************************************************/
         height: 500px;
     }
 

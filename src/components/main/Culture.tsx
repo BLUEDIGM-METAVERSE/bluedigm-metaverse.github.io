@@ -15,6 +15,7 @@ const Culture: React.FC = () => {
             { frontmatter: { startedDate: DESC } }
             { frontmatter: { title: ASC } }
           ]
+          limit: 3
         ) {
           edges {
             node {
@@ -73,7 +74,7 @@ const Culture: React.FC = () => {
                                 <Link to={node.fields.slug}>
                                     <span>{node.frontmatter.tag}<p>{node.frontmatter.startedDate} ~ {node.frontmatter.endedDate}</p></span>
                                     <strong>{node.frontmatter.title} {node.frontmatter.gatsbyImageData}</strong>
-                                    <img src={node.frontmatter.thumbnail.publicURL} alt={node.title} />
+                                    <img style={{ objectFit: 'cover' }} src={node.frontmatter.thumbnail.publicURL} alt={node.title} />
                                 </Link>
                             </li>
                         ))}

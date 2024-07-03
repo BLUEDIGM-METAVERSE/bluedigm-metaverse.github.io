@@ -8,10 +8,15 @@
 
 
 .markdown-body {
-    max-width: max-content;
+    width: 768px;
     margin: 0 auto;
 }
-.markdown-body>p {
+.markdown-body>p,
+.markdown-body>ol,
+.markdown-body>ul,
+.markdown-body iframe,
+.markdown-body video
+{
     display: block;
     max-width: 768px;
 }
@@ -126,8 +131,12 @@
     overflow-style: auto;
     height: max-content;
 }
-.markdown-body>p>.gatsby-resp-image-wrapper {
-    padding-bottom: calc();
+.markdown-body .gatsby-resp-image-wrapper {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 768px !important;
+    overflow: hidden !important;
+    position: relative !important;
 }
 span.gatsby-resp-image-background-image {
     padding-bottom: initial;
@@ -142,9 +151,8 @@ span.gatsby-resp-image-background-image {
 .markdown-body img.gatsby-resp-image-image {
     object-fit: cover;
     aspect-ratio: inherit;
-}
-.markdown-body video {
     width: 768px;
+    height: auto;
 }
 
 .markdown-body code,

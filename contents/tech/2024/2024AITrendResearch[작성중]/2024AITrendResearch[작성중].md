@@ -37,7 +37,7 @@ writer: '안병국'
 
 - 냉장고 내부 카메라가 식재료를 인지하여 푸드 리스트를 관리
 
-![Untitled](images/Untitled2.png)
+![Untitled](images/Untitled2.jpg)
 
 ![Untitled](images/Untitled3.png)
 
