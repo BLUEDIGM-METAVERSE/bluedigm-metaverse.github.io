@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import TechItem from 'components/tech/TechItem'
 import { TechListItemType } from '../../types/tech.types'
 import useInfiniteScroll, {
-  useInfiniteScrollType,
+  useInfiniteScrollType
 } from 'hooks/useInfiniteScroll'
 
 type TechListProps = {
@@ -15,13 +15,13 @@ const TechList: FunctionComponent<TechListProps> = function ({
   selectedTag,
   tech,
 }) {
-  const { techList }: useInfiniteScrollType = useInfiniteScroll(
+  const { containerRef, techList }: useInfiniteScrollType = useInfiniteScroll(
     selectedTag,
-    tech,
+    tech
   )
 
   return (
-    <ul className="row tech-list-wrap">
+    <ul ref={containerRef} className="row tech-list-wrap" >
       {techList.map(
         ({
           node: {

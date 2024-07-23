@@ -26,7 +26,7 @@ const useInfiniteScroll = function (
         }: TechListItemType) =>
           selectedCategory !== 'ALL' ? tags.includes(selectedCategory) : true,
       ),
-    [selectedCategory],
+    [selectedCategory, posts],
   )
 
   const observer =
@@ -54,7 +54,11 @@ const useInfiniteScroll = function (
     observer.observe(
       containerRef.current.children[containerRef.current.children.length - 1],
     )
-  }, [count, selectedCategory])
+    return () => {
+      observer.disconnect()
+    }
+  }
+  , [count, selectedCategory, observer])
 
   return {
     containerRef,
