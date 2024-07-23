@@ -32,7 +32,7 @@ const Header: FunctionComponent = function () {
       <header>
         <h1>
           <a href="/">
-            <Image path="/images/logo.svg" alt="metaverse team" />
+            <Image path="/images/metaflow_linear.png" alt="metaverse team" />
           </a>
         </h1>
         <nav>
