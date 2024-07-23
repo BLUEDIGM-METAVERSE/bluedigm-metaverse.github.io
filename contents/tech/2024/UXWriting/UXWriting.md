@@ -1,6 +1,6 @@
 ---
 category: 'Tech'
-title: 'UX Writing[작성 중]'
+title: 'UX Writing'
 date: '2024-06-11'
 tags: ['UX','Writing']
 writer: '안병국'
