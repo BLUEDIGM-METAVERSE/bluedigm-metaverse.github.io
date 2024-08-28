@@ -8,7 +8,7 @@ const KeyVisual: React.FC = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-4 col-md-6 col-lg-6 m-slogan">
-                        <strong>가치를<br />만들어요</strong>
+                        <strong>가치를<br />만들어요!</strong>
                         <p><span>&nbsp;자기 계발을 바탕으로 원활한 협업과 가치를 만들어내며&nbsp;<br />&nbsp;어떠한 경험이라도 이는 곧 팀으로서 성장해 나갑니다.&nbsp;</span></p>
                     </div>
                     <div className="col-sm-4 col-md-6 col-lg-6 m-photo">
