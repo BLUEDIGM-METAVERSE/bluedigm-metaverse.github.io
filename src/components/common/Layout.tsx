@@ -14,6 +14,7 @@ const MainWrapper = styled.article``
 const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       const scroll = window.scrollY;
       const header = document.querySelector('header');

@@ -32,7 +32,7 @@ const Header: FunctionComponent = function () {
       <header>
         <h1>
           <a href="/">
-            <Image path="/images/logo.svg" alt="metaverse team" />
+            <Image path="/images/metaflow_linear.png" alt="metaverse team" />
           </a>
         </h1>
         <nav>
@@ -59,9 +59,9 @@ const Header: FunctionComponent = function () {
             </button>} */}
           <button className="sm-only menu-open" type="button" aria-label="메뉴 열기 버튼">
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none">
-                  <path d="M1.20001 12.12H22.8" stroke="currentColor" strokeWidth="2.4" stroke-linecap="round"/>
-                  <path d="M1.20001 4.43994H22.8" stroke="currentColor" strokeWidth="2.4" stroke-linecap="round"/>
-                  <path d="M1.20001 19.8H22.8" stroke="currentColor" strokeWidth="2.4" stroke-linecap="round"/>
+                  <path d="M1.20001 12.12H22.8" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"/>
+                  <path d="M1.20001 4.43994H22.8" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"/>
+                  <path d="M1.20001 19.8H22.8" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"/>
               </svg>
           </button>
       </header>
@@ -70,8 +70,8 @@ const Header: FunctionComponent = function () {
       <div className="menuwrap">
           <button className="sm-only menu-close" type="button" aria-label="메뉴 닫기 버튼">
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 200 200" fill="none">
-                  <path d="M22 22L177.563 177.563" stroke="currentColor" strokeWidth="20" stroke-linecap="round"/>
-                  <path d="M178 22L22.4365 177.563" stroke="currentColor" strokeWidth="20" stroke-linecap="round"/>
+                  <path d="M22 22L177.563 177.563" stroke="currentColor" strokeWidth="20" strokeLinecap="round"/>
+                  <path d="M178 22L22.4365 177.563" stroke="currentColor" strokeWidth="20" strokeLinecap="round"/>
               </svg>
           </button>
           <nav>

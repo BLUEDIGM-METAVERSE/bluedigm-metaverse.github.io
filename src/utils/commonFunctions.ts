@@ -1,11 +1,20 @@
+import { graphql, useStaticQuery } from "gatsby";
+
 export function getUser(writer: string, edges: any): string {
     const matchedMember = edges.find(({ node: memberNode }) => memberNode.frontmatter.name === writer);
-    return matchedMember ? matchedMember.node.frontmatter.department + "의 " + matchedMember.node.frontmatter.duty : "";
+    return matchedMember ? matchedMember.node.frontmatter.department + "의 " + matchedMember.node.frontmatter.duty : "metaflow";
 }
 
 export function getImage(writer: string, edges: any): string {
+    const data = useStaticQuery(graphql`
+        query {
+            defaultImage: file(relativePath: { eq: "metaflow.png" }) {
+            publicURL
+            }
+        }
+    `);
     const matchedMember = edges.find(({ node: memberNode }) => memberNode.frontmatter.name === writer);
-    return matchedMember ? matchedMember.node.frontmatter.thumbnail.publicURL : 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAxMjlfODEg%2FMDAxNjc0OTk5NzQxODI3.bsY8Pp096lvyHW58LhZN75yFCzKee2-uP0Xgi2vZjX8g.pGWyDF1uYPZltBU6lsY2c5STziIOiH5SDn0lKYvN-LAg.JPEG.gmldud3540%2FIMG_6904.jpg&type=a340';
+    return matchedMember ? matchedMember.node.frontmatter.thumbnail.publicURL : data.defaultImage.publicURL;
 }
 
 export const getPageSlugs = (currentIndex: number, data: any) => {
