@@ -21,9 +21,11 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
         if (scroll > 50) {
           header.style.backdropFilter = 'blur(5px)';
           header.style.height = '60px'
+          header.style.backgroundColor = 'rgba(255, 210, 39, 0.5)'
         } else {
           header.style.backdropFilter = 'blur(0px)';
-          header.style.height = '100px'
+          header.style.height = '80px'
+          header.style.backgroundColor = 'rgba(255, 210, 39, 1)'
         }
       }
     };

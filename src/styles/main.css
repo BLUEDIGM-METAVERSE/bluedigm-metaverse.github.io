@@ -338,15 +338,15 @@
 }
 
 @keyframes pulse {
-        
+
     20% {
         opacity: 0.4;
     }
-    
+
     100% {
         transform: scale(2);
     }
-    
+
 }
 
 @keyframes marquee {
@@ -356,7 +356,7 @@ to { transform: translateX(-50%); }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~767 mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile mobile */
 html {
-    background-color: #4006E5;
+    background-color: #000;
 }
 
 body {
@@ -464,7 +464,7 @@ header nav {
 /* main page main page main page main page main page main page main page main page main page main page main page main page main page main page main page */
 .main-keyvisual {
     position: relative;
-    background: linear-gradient(180deg, #EAD8FF 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, #FFD227 0%, #FFD227 100%);
     height: 100vh;
     overflow: hidden;
     z-index: 5555;
@@ -492,8 +492,8 @@ header nav {
 }
 
 .m-slogan span {
-    background-color: #FFD227;
-    color: #000;
+    background-color: #000;
+    color: #ffd227;
     font-weight: 400;
     font-size: 1.000rem;
     line-height: 1.6em;
@@ -666,9 +666,9 @@ header nav {
     margin: 0 auto;
     width: 90%;
     text-align: center;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.000rem;
-    color: #4d4d4d;
+    color: #000;
     margin-bottom: 40px;
     word-break: keep-all;
 }
@@ -690,7 +690,8 @@ header nav {
     font-family: 'yg-jalnan';
     font-weight: 400;
     font-size: 2.500rem;
-    color: #333;
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
     padding-left: 16%;
     text-align: left;
 }
@@ -707,9 +708,9 @@ header nav {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    height: 100%;	
+    height: 100%;
 }
-    
+
 .pulse circle {
     fill: #9BF953;
     stroke: #000;
@@ -754,7 +755,7 @@ header nav {
 
 .introduction {
     position: relative;
-    background-color: #9BF953;
+    background-color: #b658ff;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -769,7 +770,7 @@ header nav {
     font-family: 'yg-jalnan';
     font-weight: 400;
     font-size: 3.750rem;
-    color: #4006e5;
+    color: #000;
     z-index: 2;
 }
 
@@ -789,7 +790,7 @@ header nav {
 .introduction .bg {
     height: 100%;
     width: 100%;
-    opacity: 0.4;
+    opacity: 0.1;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='600' viewBox='0 0 138 600' fill='none'%3E%3Cpath d='M0.649742 406C36.2595 406 33.5203 434.571 69.1301 434.571C103.37 434.571 103.37 406 137.611 406M0.649742 485.714C36.2595 485.714 33.5203 514.286 69.1301 514.286C103.37 514.286 103.37 485.714 137.611 485.714M0.649742 565.429C36.2595 565.429 33.5203 594 69.1301 594C103.37 594 103.37 565.429 137.611 565.429M0.285645 326C35.8955 326 33.1562 354.571 68.766 354.571C103.006 354.571 103.006 326 137.246 326M0.649742 86C36.2595 86 33.5203 114.571 69.1301 114.571C103.37 114.571 103.37 86 137.611 86M0.649742 165.714C36.2595 165.714 33.5203 194.286 69.1301 194.286C103.37 194.286 103.37 165.714 137.611 165.714M0.649742 245.429C36.2595 245.429 33.5203 274 69.1301 274C103.37 274 103.37 245.429 137.611 245.429M0.285645 6C35.8955 6 33.1562 34.5714 68.766 34.5714C103.006 34.5714 103.006 6 137.246 6' stroke='white' stroke-width='14' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-position: 0 center;
     background-repeat: repeat-x;
@@ -891,7 +892,7 @@ header nav {
     left: 50%;
     transform: translate(-50%, 0%);
     width: auto;
-    height: 100%;	
+    height: 100%;
 }
 
 .tech-main .list li {
@@ -1111,9 +1112,19 @@ header nav {
     margin-bottom: 60px;
 }
 
-.culture-main .who .profile img {
+.culture-main .who .profile .mem-photo {
+    background: linear-gradient(180deg, #9BF953 20%, #4006e5 40%, #4006e5 40%);
+    background-size: 100% 8px;
+    border-radius: 1000px;
     width: 40%;
+    padding: 0px 5% 0px 0;
+}
+
+.culture-main .who .profile .mem-photo img {
+    width: 100%;
     height: auto;
+    border: 6px solid #9BF953;
+    border-radius: 1000px;
 }
 
 .culture-main .who .profile dt {
@@ -1134,7 +1145,7 @@ header nav {
     font-family: 'Spoqa Han Sans', 'Sans-serif';
     font-weight: 700;
     font-size: 1.125rem;
-    padding-top: 8px;
+    padding-top: 0px;
 }
 
 .bx {
@@ -1220,10 +1231,10 @@ header nav {
 
 /* footer */
 footer {
-    background-color: #f2f2f2;
+    background-color: #000;
     font-weight: 400;
     font-size: 0.857rem;
-    color: #999;
+    color: #4d4d4d;
     padding: 12px 0;
     text-align: center;
     vertical-align: middle;
@@ -1241,9 +1252,9 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    height: 300px;
-    width: 100vw;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(180deg, rgba(0, 255, 255, 0.1) 0%, #fff 100%);
+    height: 0px;
+    width: 0vw;
+    /*background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(180deg, rgba(0, 255, 255, 0.1) 0%, #fff 100%);*/
     z-index: 1111;
 }
 
@@ -1253,7 +1264,7 @@ main {
 
 .sub-slogan {
     height: 5em;
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     font-family: 'yg-jalnan';
@@ -1462,18 +1473,24 @@ main {
 
 /* view */
 .view-wrap {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px;
 }
 
 .view-wrap dt {
+    width: 800px;
     font-family: 'yg-jalnan';
     font-weight: 400;
     font-size: 1.250rem;
     margin-bottom: 40px;
+    letter-spacing: 0.02em;
 }
 
 .view-info {
     display: flex;
+    width: 800px;
     align-items: center;
     margin-bottom: 40px;
 }
@@ -1515,6 +1532,7 @@ main {
 
 .view-btn-wrap {
     display: flex;
+    width: 800px;
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
@@ -1610,27 +1628,28 @@ main {
     header {
         display: flex;
         align-items: center;
-        height: 100px;
+        height: 80px;
         width: 100%;
         padding: 0 24px;
         position: fixed;
         z-index: 9999;
+        background: #ffd227;
     }
-    
+
     header h1 {
         flex: none;
         padding: 36px 0;
     }
-    
+
     header h1 a {
         display: inline-block;
         height: 28px;
     }
-    
+
     header h1 a img {
         height: 100%;
     }
-    
+
     .sm-only {
         display: none;
     }
@@ -1641,7 +1660,7 @@ main {
         height: 30px;
         margin-left: 0;
     }
-    
+
     /* nav */
     header nav {
         display: block;
@@ -1680,7 +1699,7 @@ main {
     nav ul li:nth-child(3) a::after {
         background-color: #fc875e;
     }
-    
+
     nav ul li a:hover::after {
         width: 100%;
         height: 4px;
@@ -1693,7 +1712,7 @@ main {
         padding: 4px 12px 8px;
         font-weight: 700;
         font-size: 1rem;
-        color: #4d4d4d;
+        color: #000;
     }
 
     nav li a:hover {
@@ -1728,7 +1747,6 @@ main {
     /* main page */
     .main-keyvisual {
         position: relative;
-        background: linear-gradient(180deg, #EAD8FF 0%, rgba(255, 255, 255, 0) 100%);
         height: 100vh;
         overflow: hidden;
         z-index: 5555;
@@ -1826,27 +1844,17 @@ main {
     }
 
     .circle-g {
-        position: absolute;
         width: 200px;
         height: 200px;
         top: 60%;
         left: 2%;
-        z-index: 9;
-        background-color: #9BF953;
-        border-radius: 50%;
-        animation: circle-ani 2s ease-in-out alternate-reverse infinite;
     }
 
     .circle-v {
-        position: absolute;
         width: 200px;
         height: 200px;
         top: 70%;
         right: -1%;
-        z-index: 9;
-        background-color: #B658FF;
-        border-radius: 50%;
-        animation: circle-ani 2s ease-in-out alternate-reverse infinite;
     }
 
     .circle-line {
@@ -1873,8 +1881,8 @@ main {
 
     .object-wave {
         position: absolute;
-        top: 30%;
-        left: 10%;
+        top: 26%;
+        left: 8%;
         width: 84px;
         height: 68px;
         z-index: 9;
@@ -1901,20 +1909,22 @@ main {
         background-position: center top;
         background-size: cover;
     }
-    
+
     .main-slogan {
         display: block;
         /* mix-blend-mode: difference; */
         font-family: 'yg-jalnan';
         font-weight: 400;
-        font-size: 160px;
-        letter-spacing: -5px;
-        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.50);
-        color: #fff;
+        font-size: 11.8rem;
+        letter-spacing: -10px;
+        color: rgba(255, 210, 39, 0.1);
+        /*text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);*/
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
         position: absolute;
-        left: -12%;
-        bottom: 4%;
-        opacity: 50%;
+        width: 100%;
+        left: 0%;
+        bottom: 2%;
+        opacity: 100%;
         z-index: -1;
     }
 
@@ -1936,9 +1946,7 @@ main {
         margin: 0 auto;
         width: 60%;
         text-align: center;
-        font-weight: 700;
         font-size: 2.000rem;
-        color: #4d4d4d;
         margin-bottom: 80px;
         word-break: keep-all;
     }
@@ -1958,7 +1966,6 @@ main {
     .story-slogan span p {
         font-weight: 400;
         font-size: 6.125rem;
-        color: #333;
         padding-left: 140px;
         text-align: left;
     }
@@ -1975,28 +1982,7 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
-        height: 100%;	
-    }
-        
-    .pulse circle {
-        fill: #9BF953;
-        stroke: #000;
-        transform: scale(0);
-        opacity: 0;
-        transform-origin: 50% 50%;
-        animation: pulse 6s cubic-bezier(.5,.5,0,1) infinite;
-    }
-
-    .pulse circle:nth-child(2) {
-        fill: #B658FF;
-        stroke: #000;
-        animation: pulse 6s 0.75s cubic-bezier(.5,.5,0,1) infinite;
-    }
-
-    .pulse circle:nth-child(3) {
-        fill: #FC875E;
-        stroke: #000;
-        animation: pulse 6s 1.5s cubic-bezier(.5,.5,0,1) infinite;
+        height: 100%;
     }
 
     .bubble {
@@ -2022,7 +2008,6 @@ main {
 
     .introduction {
         position: relative;
-        background-color: #9BF953;
         height: 100vh;
         display: flex;
         align-items: center;
@@ -2030,13 +2015,8 @@ main {
     }
 
     .introduction .say {
-        position: absolute;
-        white-space: nowrap;
-        will-change: transform;
-        animation: marquee 40s linear infinite;
         font-weight: 400;
         font-size: 8.125rem;
-        color: #4006e5;
         z-index: 2;
     }
 
@@ -2056,11 +2036,6 @@ main {
     .introduction .bg {
         height: 100%;
         width: 100%;
-        opacity: 0.4;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='600' viewBox='0 0 138 600' fill='none'%3E%3Cpath d='M0.649742 406C36.2595 406 33.5203 434.571 69.1301 434.571C103.37 434.571 103.37 406 137.611 406M0.649742 485.714C36.2595 485.714 33.5203 514.286 69.1301 514.286C103.37 514.286 103.37 485.714 137.611 485.714M0.649742 565.429C36.2595 565.429 33.5203 594 69.1301 594C103.37 594 103.37 565.429 137.611 565.429M0.285645 326C35.8955 326 33.1562 354.571 68.766 354.571C103.006 354.571 103.006 326 137.246 326M0.649742 86C36.2595 86 33.5203 114.571 69.1301 114.571C103.37 114.571 103.37 86 137.611 86M0.649742 165.714C36.2595 165.714 33.5203 194.286 69.1301 194.286C103.37 194.286 103.37 165.714 137.611 165.714M0.649742 245.429C36.2595 245.429 33.5203 274 69.1301 274C103.37 274 103.37 245.429 137.611 245.429M0.285645 6C35.8955 6 33.1562 34.5714 68.766 34.5714C103.006 34.5714 103.006 6 137.246 6' stroke='white' stroke-width='14' stroke-linejoin='round'/%3E%3C/svg%3E");
-        background-position: 0 center;
-        background-repeat: repeat-x;
-        z-index: 1;
     }
 
     .tech-main {
@@ -2157,7 +2132,7 @@ main {
         left: 50%;
         transform: translate(-50%, 0%);
         width: auto;
-        height: 100%;	
+        height: 100%;
     }
 
     .tech-main .list li {
@@ -2172,7 +2147,7 @@ main {
     .tech-main .list li:hover {
         border-radius: 20px;
         padding: 36px;
-        background-color: #FC875E;
+        background-color: #8250df;
         width: 378px;
         height: 400px;
     }
@@ -2449,14 +2424,13 @@ main {
         display: block;
     }
 
-    .culture-main .who .profile img {
-        width: 324px;
-        height: 288px;
-    }
+    /*.culture-main .who .profile img {*/
+    /*    width: 40%;*/
+    /*    height: auto;*/
+    /*}*/
 
     .culture-main .who .profile dt {
         font-size: 2.500rem;
-        padding-bottom: 12px;
     }
 
     .culture-main .who .profile dt span {
@@ -2465,8 +2439,8 @@ main {
     }
 
     .culture-main .who .profile dd {
-        font-size: 2.000rem;
-        padding-top: 8px;
+        font-size: 1.250rem;
+        padding-top: 0px;
     }
 
     .bx {
@@ -2532,14 +2506,16 @@ main {
         margin-bottom:80px;
         z-index: 5555;
     }
-    
+
     .sub-keyvisual {
         position: absolute;
         top: 0;
         left: 0;
-        height: 520px;
+        height: 100px;
         width: 100vw;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), linear-gradient(180deg, rgba(0, 255, 255, 0.1) 0%, #fff 100%);
+        background: linear-gradient(180deg, #ffd227 10%, #fff 45%, #fff 45%);
+        background-size: 100% 6px;
+        /*background: linear-gradient(180deg, #ffd227 0%, #ffd227 90px, #fff 90px);*/
         z-index: 1111;
     }
 
@@ -2549,18 +2525,19 @@ main {
         font-family: 'yg-jalnan';
         font-weight: 400;
         font-size: 160px;
-        letter-spacing: -5px;
-        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.50);
-        color: #fff;
+        letter-spacing: -20px;
+        color: rgba(64, 6, 229, 0.03);
+        /*text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);*/
+        -webkit-text-stroke: 1px rgba(64, 6, 229, 0.3);
         position: absolute;
-        right: 0%;
-        top: 120px;
-        opacity: 50%;
+        right: 12%;
+        top: 150px;
+        opacity: 100%;
     }
 
     .sub-slogan {
         height: 3.5em;
-        margin-top: 60px;
+        margin-top: 80px;
         display: flex;
         align-items: center;
         font-weight: 400;
@@ -2602,7 +2579,7 @@ main {
         border-radius: 100vw;
         display: flex;
     }
-    
+
     .culture-list-wrap .thum img {
         width: 100%;
         height: 100%;
@@ -2898,20 +2875,20 @@ main {
     .circle-line {
         width: 60px;
         height: 60px;
-        top: 80%;
-        left: 56%;
+        top: 74%;
+        left: 47%;
     }
 
     .circle-line2 {
         width: 40px;
         height: 40px;
-        top: 38%;
+        top: 32%;
         left: 90%;
     }
 
     .object-wave {
-        top: 30%;
-        left: 10%;
+        top: 28%;
+        left: 8%;
         width: 84px;
         height: 68px;
     }
@@ -2929,11 +2906,28 @@ main {
         width: 100%;
     }
 
+    .main-slogan {
+        display: block;
+        /* mix-blend-mode: difference; */
+        font-family: 'yg-jalnan';
+        font-weight: 400;
+        font-size: 14rem;
+        letter-spacing: -5px;
+        color: rgba(255, 210, 39, 0.1);
+        /*text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);*/
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        width: 100%;
+        left: 0%;
+        bottom: 2%;
+        opacity: 100%;
+        z-index: -1;
+    }
+
     /* story-title */
 
     .story-slogan .overview {
         width: 60%;
-        font-weight: 700;
         font-size: 2.000rem;
     }
 
@@ -2980,7 +2974,6 @@ main {
     .introduction .bg {
         height: 100%;
         width: 100%;
-        opacity: 0.4;
     }
 
     .tech-main {
@@ -3033,7 +3026,6 @@ main {
     }
     .tech-main .list li:hover {
         padding: 36px;
-        background-color: #FC875E;
         width: 378px;
         height: 400px;
     }
@@ -3059,13 +3051,11 @@ main {
     .tech-main .list li:hover dt {
         width: 100%;
         margin-top: 24px;
-        font-weight: 700;
         font-size: 2.000rem;
     }
 
     .tech-main .list li:hover dd {
         margin: 12px 0 24px;
-        font-weight: 400;
         font-size: 1.000rem;
         line-height: 1.600rem;
     }
@@ -3084,7 +3074,6 @@ main {
 
     .tech-main .list li:hover .card-bot span {
         margin-left: 16px;
-        font-weight: 400;
         font-size: 0.875rem;
     }
 
@@ -3163,7 +3152,6 @@ main {
 
     .culture-main .who .profile dt {
         font-size: 2.500rem;
-        padding-bottom: 12px;
     }
 
     .culture-main .who .profile dt span {

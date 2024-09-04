@@ -1,5 +1,5 @@
 ---
-orderNum: 7
+orderNum: 11
 name: '손해솔'
 thumbnail: './images/profile_shs.webp'
 department: 'MetaFlow 팀'

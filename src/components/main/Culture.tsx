@@ -84,8 +84,8 @@ const Culture: React.FC = () => {
                     <strong>우리는 누구일까요?</strong>
                     <div className="row">
                         {members.map(({ node }) => (
-                            <div className="profile col-sm-4 col-md-6 col-lg-6">
-                                <img src={node.frontmatter.thumbnail.publicURL} alt={node.frontmatter.name} />
+                            <div className="profile col-sm-4 col-md-4 col-lg-4">
+                                <div className="mem-photo"><img src={node.frontmatter.thumbnail.publicURL} alt={node.frontmatter.name} /></div>
                                 <dl>
                                     <dt>{node.frontmatter.name}<span>{node.frontmatter.position}</span></dt>
                                     <dd>{node.frontmatter.duty}</dd>

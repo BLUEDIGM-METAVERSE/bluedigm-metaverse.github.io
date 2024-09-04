@@ -45,7 +45,7 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
   if (typeof window !== 'undefined') {
     if (window.location.pathname.includes("/culture/")) {
       listPath = "/culture/";
-      postTitle = '우리의 이야기로<br />문화를 만들어요';
+      postTitle = '문화를 만드는<br />땡큐 피플팀의 활약';
     } else if (window.location.pathname.includes("/tech/")) {
       listPath = "/tech/";
       postTitle = 'IT 트렌드와<br />기술을 공유해요';
@@ -59,11 +59,13 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
 
   return (
     <Layout>
-      <div className="sub-keyvisual"></div>
+      <div className="sub-keyvisual">
+        <span></span>
+      </div>
           <div className="container">
               <div className="row">
-                  <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan" dangerouslySetInnerHTML={{ __html: postTitle }}>
-                  </div>
+                  {/*<div className="col-sm-4 col-md-12 col-lg-12 sub-slogan" dangerouslySetInnerHTML={{ __html: postTitle }}>*/}
+                  {/*</div>*/}
                   {/* 경험 리스트 */}
                   <div className="row">
                       <dl className="col-sm-4 col-md-12 col-lg-12 view-wrap">
@@ -96,7 +98,7 @@ const PostDetail: FunctionComponent<PostDetailProps> = function ({
                               </Link>
                               <Link to={listPath}>목록</Link>
                               <Link to={nextSlug} className={nextSlug ? '' : 'disabled'}>
-                                  예전
+                                  다음
                                   <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 200 200" fill="none"><path d="M143 189L56.0259 102.026C55.2448 101.245 55.2448 99.9785 56.0259 99.1974L143 12.2233" stroke="currentColor" stroke-width="20" stroke-linecap="round"></path></svg>
                                   </span>

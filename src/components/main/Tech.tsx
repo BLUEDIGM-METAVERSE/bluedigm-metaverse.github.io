@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { getUser, getImage } from '../../utils/commonFunctions'
 import { useMembersQuery } from '../../queries/member.query'
+import Image from 'components/common/Image'
 
 const Tech: React.FC = () => {
     const members = useMembersQuery();
@@ -52,13 +53,13 @@ const Tech: React.FC = () => {
                             </dd>
                         </dl>
                         <ul className="col-sm-4 col-md-6 col-lg-6 thum">
-                            <li><img src="https://recruit.navercorp.com/share/tmplat/naver/img/slide/people/img_slide2_9.jpg" alt="" /></li>
-                            <li><img src="https://recruit.navercorp.com/share/tmplat/naver/img/people/bg_people_07.jpg" alt="" /></li>
-                            <li><img src="https://recruit.navercorp.com/share/tmplat/naver/img/culture/img_06_01.jpg" alt="" /></li>
+                            <li><Image path="/images/img_mh1.webp" alt="" /></li>
+                            <li><Image path="/images/img_mh2.webp" alt="" /></li>
+                            <li><Image path="/images/img_mh3.webp" alt="" /></li>
                         </ul>
                     </div>
                 </div>
-                
+
                 <div className="list">
                     <ul>
                         {data.techs.edges.map(({ node }) => (

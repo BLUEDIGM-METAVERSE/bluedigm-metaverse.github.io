@@ -10,7 +10,7 @@ writer: '안병국'
 
 # UX Writing 개요
 
-## **UI 텍스트를 작성할 때 UX Writing은?**
+## UI 텍스트를 작성할 때 UX Writing은?
 
 - **UX** : UX를 고려해 UI 텍스트를 작성하는 일
 - **Branding** : 브랜드 방향성을 UI 텍스트에 반영하는 일

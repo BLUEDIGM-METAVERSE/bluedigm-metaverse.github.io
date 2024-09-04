@@ -27,7 +27,7 @@ const CulturePage: FunctionComponent<CulturePageProps> = function ({
       </div>
       <div className="container">
           <div className="row">
-              <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">우리의 이야기로<br />문화를 만들어요</div>
+              <div className="col-sm-4 col-md-12 col-lg-12 sub-slogan">문화를 만드는<br />땡큐 피플팀의 활약</div>
               <CultureList cultures={edges} />
           </div>
       </div>

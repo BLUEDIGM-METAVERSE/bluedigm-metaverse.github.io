@@ -1,5 +1,5 @@
 ---
-orderNum: 2
+orderNum: 3
 name: '최일주'
 thumbnail: './images/profile_cij.webp'
 department: 'MetaFlow 팀'
