@@ -122,7 +122,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://bluedigm-metaverse.github.io/',
+        siteUrl: 'https://digm.bluedigm.com',
         stripQueryString: true,
       },
     },
