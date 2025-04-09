@@ -81,7 +81,7 @@ const Culture: React.FC = () => {
                     </ul>
                 </div>
                 <div className="who">
-                    <strong>우리는 누구일까요???</strong>
+                    <strong>우리는 누구일까요?</strong>
                     <div className="row">
                         {members.map(({ node }) => (
                             <div className="profile col-sm-4 col-md-4 col-lg-4">

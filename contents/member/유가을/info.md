@@ -1,9 +1,9 @@
 ---
-orderNum: 12
-name: '장서연'
-thumbnail: './images/profile_jsy.webp'
+orderNum: 10
+name: '유가을'
+thumbnail: './images/profile_fall.webp'
 department: 'MetaFlow 팀'
-position: '전임'
+position: '선임'
 duty: 'Software Engineer'
 alia: '본투비 긱시크'
 introduce: '안녕하세요. 최일주 수석입니다.'
@@ -11,4 +11,4 @@ introduce: '안녕하세요. 최일주 수석입니다.'
 
 # DigitalPlatform 본부 MetaFlow 팀
 
-![Git Commit Message Example](images/profile_cij.webp)
+![Git Commit Message Example](images/profile_fall.webp)

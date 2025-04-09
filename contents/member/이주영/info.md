@@ -1,9 +1,9 @@
 ---
-orderNum: 10
+orderNum: 11
 name: '이주영'
 thumbnail: './images/profile_ljy.webp'
 department: 'MetaFlow 팀'
-position: '전임'
+position: '선임'
 duty: 'Software Engineer'
 alia: '본투비 긱시크'
 introduce: '안녕하세요. 최일주 수석입니다.'
