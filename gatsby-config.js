@@ -9,9 +9,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Metaverse Team`,
-    description: `(주)비디 • 블루다임 • 디지털플랫폼본부 • 메타버스팀`,
-    author: `메타버스팀`,
+    title: `MetaFlow Team`,
+    description: `(주)비디 • 블루다임 • 디지털플랫폼본부 • 메타플로우팀`,
+    author: `메타플로우팀`,
     siteUrl: `https://digm.bluedigm.com`,
   },
   plugins: [
